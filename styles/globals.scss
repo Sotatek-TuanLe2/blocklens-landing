@@ -1,0 +1,51 @@
+@import './_color-variables.scss';
+@import './_mixins.scss';
+
+* {
+  line-height: 140%;
+}
+
+@font-face {
+  font-family: 'Spline Sans Mono';
+  src: url('/fonts/SplineSansMono-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Anderson Grotesk';
+  src: url('/fonts/AndersonGrotesk.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Anderson Grotesk Light';
+  src: url('/fonts/AndersonGrotesk-Light.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Anderson Grotesk Bold';
+  src: url('/fonts/AndersonGrotesk-Bold.otf');
+  font-weight: 700;
+}
+body {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+}
+
+.page-container {
+  background-image: url('/images/bg-homepage.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  font-family: 'Anderson Grotesk', sans-serif;
+  .content-container {
+    padding-top: 125px;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 1178px;
+    padding: 125px 24px 0 24px;
+  }
+}
