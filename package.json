@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .tsx,.ts --fix . || exit 0",
-    "format": "prettier --write \"pages/**/*.ts\" \"pages/**/*.tsx\"",
+    "lint": "eslint --ext .tsx,.ts --fix . && npx stylelint \"styles/**/*.css\" \"styles/**/*.scss\" || exit 0",
+    "format": "prettier --write \"pages/**/*.ts\" \"pages/**/*.tsx\" \"styles/**/*.css\" \"styles/**/*.scss\" || exit 0",
     "pre-commit": "npm run lint && npm run format"
   },
   "dependencies": {
@@ -35,6 +35,9 @@
     "@commitlint/config-conventional": "^17.4.0",
     "branchlint": "0.0.2",
     "husky": "^4.3.8",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
