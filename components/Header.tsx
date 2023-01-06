@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FC, useState } from 'react';
 import { CloseMenuIcon, IconMenuMobile } from 'components/Icons';
 import styles from 'styles/components/Header.module.scss';
+import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
 
 interface IHeader {
   isFixedHeader: boolean;
@@ -13,15 +14,15 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
   const menus = [
     {
       name: 'Developer',
-      path: '/developer',
+      path: '/',
     },
     {
       name: 'Documentation',
-      path: '/documentation',
+      path: '',
     },
     {
       name: 'About us',
-      path: '/about-us',
+      path: '/',
     },
     {
       name: 'Pricing',
@@ -61,7 +62,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
               );
             })}
             <div>
-              <Link href={'https://blocksniper.io/login'} target="_blank">
+              <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -80,14 +81,18 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
         <div className={`${styles['menus-mobile']}`}>
           {menus.map((item, index) => {
             return (
-              <Link href={item.path} key={index}>
+              <Link
+                href={item.path}
+                key={index}
+                onClick={() => setIsShowHeader(false)}
+              >
                 {item.name}
               </Link>
             );
           })}
 
           <div>
-            <Link href={'https://blocksniper.io/login'} target="_blank">
+            <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>

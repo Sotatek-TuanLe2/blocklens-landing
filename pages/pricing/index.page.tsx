@@ -10,6 +10,9 @@ import {
 } from '@chakra-ui/react';
 import { isMobile } from 'react-device-detect';
 import AppAccordion from 'components/AppAccordion';
+import { useRouter } from 'next/router';
+import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
+import Link from 'next/link';
 
 const LIST_PACKAGE = [
   {
@@ -105,6 +108,7 @@ const LIST_PLAN = [
 ];
 
 const Pricing = () => {
+  const router = useRouter();
   const _renderPlanItem = () => (
     <>
       {LIST_PLAN.map((plan, index) => {
@@ -151,7 +155,11 @@ const Pricing = () => {
                     <span>{plan.messagesCount}</span>
                   </div>
                   <div className={styles['active-plan-btn']}>
-                    <div>Get Started</div>
+                    <div>
+                      <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                        Get Started
+                      </Link>
+                    </div>
                     <div className="icon-vector-right"></div>
                   </div>
                 </AccordionPanel>
@@ -227,25 +235,42 @@ const Pricing = () => {
           <div
             className={`${styles['free-plan-cell']} ${styles['active-plan']}`}
           >
-            <div>Get Started</div>
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
             <div className="icon-vector-right"></div>
           </div>
           <div
             className={`${styles['starter-plan-cell']} ${styles['active-plan']}`}
           >
-            <div>Get Started</div> <div className="icon-vector-right"></div>
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>{' '}
+            <div className="icon-vector-right"></div>
           </div>
           <div
             className={`${styles['growth-plan-cell']} ${styles['active-plan']}`}
           >
-            <div>Get Started</div>
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
 
             <div className="icon-vector-right"></div>
           </div>
           <div
             className={`${styles['pro-plan-cell']} ${styles['active-plan']}`}
           >
-            <div>Get Started</div>
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
             <div className="icon-vector-right"></div>
           </div>
         </div>

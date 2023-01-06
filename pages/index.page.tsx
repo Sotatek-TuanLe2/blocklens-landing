@@ -4,6 +4,7 @@ import styles from 'styles/LandingPage.module.scss';
 import { isMobile } from 'react-device-detect';
 import Link from 'next/link';
 import MainImageLanding from 'components/MainImageLanding';
+import { BLOCKSNIPER_LOGIN_URL, BLOCKSNIPER_SINGUP_URL } from 'utils/constant';
 
 const categories = [
   {
@@ -91,7 +92,7 @@ const Home = () => {
           </div>
 
           <div className={styles['introduction__btn']}>
-            <Link href={'/login'}>
+            <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
               <button className={styles['btn-primary']}>Get Started</button>
             </Link>
           </div>
@@ -203,7 +204,7 @@ const Home = () => {
             </div>
 
             <div className={styles['get-start__btn']}>
-              <Link href={'/sign-up'}>
+              <Link href={BLOCKSNIPER_SINGUP_URL} target="_blank">
                 <button className={styles['btn-primary']}>Sign Up</button>
               </Link>
             </div>
