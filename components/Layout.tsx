@@ -4,9 +4,10 @@ import Header from './Header';
 
 interface LayoutProps {
   children: React.ReactNode;
+  className?: string;
 }
 const Layout = (props: LayoutProps) => {
-  const { children, ...seoProps } = props;
+  const { children, className = '', ...seoProps } = props;
   const [isFixedHeader, setIsFixedHeader] = useState<boolean>(false);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Layout = (props: LayoutProps) => {
   }, []);
 
   return (
-    <div className="page-container">
+    <div className={`page-container ${className}`}>
       <Header isFixedHeader={isFixedHeader} />
       <div className="content-container">{children}</div>
       <Footer />

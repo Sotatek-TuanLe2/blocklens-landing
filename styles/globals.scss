@@ -3,6 +3,7 @@
 
 * {
   line-height: 140%;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -35,17 +36,41 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .page-container {
   background-image: url('/images/bg-homepage.png');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  font-family: 'Anderson Grotesk', sans-serif;
+  font-family: 'Anderson Grotesk Light', sans-serif;
   .content-container {
-    padding-top: 125px;
     min-height: 100vh;
     margin: 0 auto;
     max-width: 1178px;
-    padding: 125px 24px 0 24px;
+    padding: 0px 24px 0 24px;
   }
+}
+.pricing-container {
+  background-image: url('/images/bg-price-page.png');
+}
+
+.icon-tone {
+  width: 24px;
+  height: 24px;
+  background: url('/images/icon_social_media.png') -54px -10px;
+}
+.icon-telegram {
+  width: 24px;
+  height: 25px;
+  background: url('/images/icon_social_media.png') -10px -10px;
+}
+
+.icon-vector-right {
+  width: 12px;
+  height: 12px;
+  background: url('/images/icon_social_media.png') -10px -55px;
 }

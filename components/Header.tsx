@@ -61,7 +61,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
               );
             })}
             <div>
-              <Link href={'/login'}>
+              <Link href={'https://blocksniper.io/login'} target="_blank">
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -87,7 +87,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
           })}
 
           <div>
-            <Link href={'/login'}>
+            <Link href={'https://blocksniper.io/login'} target="_blank">
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>
