@@ -1,0 +1,79 @@
+@import '../_color-variables.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+.footer-landing {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+  max-width: 1178px;
+  margin: 0 auto;
+  padding: 80px 24px 70px 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: column;
+    padding: 60px 24px 60px 24px;
+  }
+}
+.box-info {
+  width: 45%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: $title;
+
+  img {
+    width: 155px;
+  }
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 40px;
+
+    img {
+      width: 125px;
+    }
+  }
+}
+
+.description {
+  max-width: 420px;
+  margin: 24px 0;
+  font-weight: 400;
+}
+
+.name,
+.description {
+  opacity: 0.6;
+}
+
+.menus-link {
+  width: 50%;
+  display: flex;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+.menus {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  width: 48%;
+  color: $title;
+}
+
+.menu-item {
+  display: block;
+  margin-bottom: 24px;
+  opacity: 0.6;
+  color: $title;
+
+  &:nth-child(2) {
+    margin-top: 24px;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

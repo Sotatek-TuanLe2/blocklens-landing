@@ -1,0 +1,107 @@
+@import '../_color-variables.scss';
+@import '../_mixins.scss';
+@import '../_variables.scss';
+
+.header-landing {
+  position: fixed;
+  padding: 30px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 9999;
+
+  @include tablet {
+    padding: 24px 0;
+    &.mobile {
+      height: 100vh;
+      background-image: url('/images/bg-menu-mobile.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .btn-primary {
+    background: linear-gradient(225deg, #226cff 14.89%, #1084ff 85.85%);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    padding: 12px 24px;
+    color: $title;
+    font-family: 'Anderson Grotesk Bold', sans-serif;
+    border: transparent;
+
+    &:hover {
+      cursor: pointer;
+      background: #226cff;
+    }
+  }
+  .menus {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .menu {
+      font-family: 'Anderson Grotesk Bold', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: $title;
+      display: block;
+      margin-right: 40px;
+
+      &:hover {
+        color: $link;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .menus-mobile {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      display: block;
+      color: $title;
+      margin-bottom: 60px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      margin-right: 0px;
+    }
+  }
+  &.fixed {
+    background-color: $bg1;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1178px;
+    padding: 0 24px;
+
+    @include tablet {
+      align-items: center;
+      img {
+        width: 125px;
+      }
+    }
+  }
+}
+
+.desktop-ui {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+.mobile-ui {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
