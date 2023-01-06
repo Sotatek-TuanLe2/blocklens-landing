@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .tsx,.ts --fix . && npx stylelint \"styles/**/*.css\" \"styles/**/*.scss\" || exit 0",
-    "format": "prettier --write \"pages/**/*.ts\" \"pages/**/*.tsx\" \"styles/**/*.css\" \"styles/**/*.scss\" || exit 0",
+    "format": "prettier --write .",
     "pre-commit": "npm run lint && npm run format"
   },
   "dependencies": {

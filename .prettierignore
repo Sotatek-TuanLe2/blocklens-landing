@@ -1,9 +1,12 @@
+.next
 .node_modules
 /public
 
 .eslintrc
 .prettierrc
 
-package-lock.json
-package.json
+next*
+
+*.json
+pull_request_template.md
 README.md
