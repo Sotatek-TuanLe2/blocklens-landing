@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC, useState } from 'react';
-import { CloseMenuIcon, IconMenuMobile } from '../components/Icons';
-import styles from '../styles/components/Header.module.scss';
+import { CloseMenuIcon, IconMenuMobile } from 'components/Icons';
+import styles from 'styles/components/Header.module.scss';
 
 interface IHeader {
   isFixedHeader: boolean;
