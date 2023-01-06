@@ -6,9 +6,10 @@ import { defaultSEO } from 'next-seo.config';
 
 interface LayoutProps {
   children: React.ReactNode;
+  className?: string;
 }
 const Layout = (props: LayoutProps) => {
-  const { children, ...seoProps } = props;
+  const { children, className = '', ...seoProps } = props;
   const SEO = { ...defaultSEO, ...seoProps };
 
   const [isFixedHeader, setIsFixedHeader] = useState<boolean>(false);
@@ -22,7 +23,7 @@ const Layout = (props: LayoutProps) => {
   }, []);
 
   return (
-    <div className="page-container">
+    <div className={`page-container ${className}`}>
       <NextSeo {...SEO} />
       <Header isFixedHeader={isFixedHeader} />
       <div className="content-container">{children}</div>

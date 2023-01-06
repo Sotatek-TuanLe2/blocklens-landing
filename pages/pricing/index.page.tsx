@@ -1,9 +1,360 @@
 import { ReactElement } from 'react';
 import Layout from 'components/Layout';
-import styles from 'styles/LandingPage.module.scss';
+import styles from 'styles/PricingPage.module.scss';
+import { AddIcon, MinusIcon } from '@chakra-ui/icons';
+import {
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+} from '@chakra-ui/react';
+import { isMobile } from 'react-device-detect';
+import AppAccordion from 'components/AppAccordion';
+import { useRouter } from 'next/router';
+import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
+import Link from 'next/link';
+
+const LIST_PACKAGE = [
+  {
+    NAME: 'STARTER',
+    PRICE: '0',
+    SERVICE: ['2 apps', '100 messages/day', 'All supported chains'],
+    BADGE: '',
+  },
+  {
+    NAME: 'BASIC',
+    PRICE: '29',
+    SERVICE: ['5 apps', '500 messages/day', 'All supported chains'],
+    BADGE: '',
+  },
+  {
+    NAME: 'GROWTH',
+    PRICE: '119',
+    SERVICE: ['7 apps', '2,500 messages/day', 'All supported chains'],
+    BADGE: 'Popular',
+  },
+  {
+    NAME: 'PROFESSIONAL',
+    PRICE: '479',
+    SERVICE: ['15 apps', '12,000 messages/day', 'All supported chains'],
+    BADGE: '',
+  },
+];
+
+const LIST_NETWORK = [
+  {
+    name: 'Mainnet, Testnet',
+    free: 'true',
+    starter: 'true',
+    growth: 'true',
+    professional: 'true',
+  },
+  {
+    name: 'All supported chains',
+    free: 'true',
+    starter: 'true',
+    growth: 'true',
+    professional: 'true',
+  },
+  {
+    name: 'Apps',
+    free: '2',
+    starter: '5',
+    growth: '7',
+    professional: '15',
+  },
+  {
+    name: 'Daily messages',
+    free: '100',
+    starter: '500',
+    growth: '2,500',
+    professional: '12,000',
+  },
+];
+
+const LIST_PLAN = [
+  {
+    name: 'STARTER',
+    mainTestNet: 'Mainnet, TestNet',
+    archiveDate: 'All supported chains',
+    activeApps: '2 apps',
+    messagesCount: '100 messsages/day',
+    linkStarted: '/',
+  },
+  {
+    name: 'BASIC',
+    mainTestNet: 'Mainnet, TestNet',
+    archiveDate: 'All supported chains',
+    activeApps: '5 apps',
+    messagesCount: '500 messsages/day',
+    linkStarted: '/',
+  },
+  {
+    name: 'GROWTH',
+    mainTestNet: 'Mainnet, TestNet',
+    archiveDate: 'All supported chains',
+    activeApps: '7 apps',
+    messagesCount: '2,500 messsages/day',
+    linkStarted: '/',
+  },
+  {
+    name: 'PROFESSIONAL',
+    mainTestNet: 'Mainnet, TestNet',
+    archiveDate: 'All supported chains',
+    activeApps: '15 apps',
+    messagesCount: '12,000 messsages/day',
+    linkStarted: '/',
+  },
+];
 
 const Pricing = () => {
-  return <div className={styles['landingpage']}>Pricing</div>;
+  const router = useRouter();
+  const _renderPlanItem = () => (
+    <>
+      {LIST_PLAN.map((plan, index) => {
+        return (
+          <AccordionItem
+            key={`${index} plan mobile`}
+            className={styles['content-plan-wrap']}
+          >
+            {({ isExpanded }) => (
+              <>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      fontWeight={700}
+                      fontSize="18px"
+                    >
+                      {plan.name}
+                    </Box>
+                    {isExpanded ? (
+                      <MinusIcon fontSize="12px" />
+                    ) : (
+                      <AddIcon fontSize="12px" />
+                    )}
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={0}>
+                  <div className={styles['content-plan-item']}>
+                    <div className="icon-tone"></div>
+                    <span>{plan.mainTestNet}</span>
+                  </div>
+                  <div className={styles['content-plan-item']}>
+                    <div className="icon-tone"></div>
+                    <span>{plan.archiveDate}</span>
+                  </div>
+                  <div className={styles['content-plan-item']}>
+                    <div className="icon-tone"></div>
+                    <span>{plan.activeApps}</span>
+                  </div>
+                  <div className={styles['content-plan-item']}>
+                    <div className="icon-tone"></div>
+                    <span>{plan.messagesCount}</span>
+                  </div>
+                  <div className={styles['active-plan-btn']}>
+                    <div>
+                      <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                        Get Started
+                      </Link>
+                    </div>
+                    <div className="icon-vector-right"></div>
+                  </div>
+                </AccordionPanel>
+              </>
+            )}
+          </AccordionItem>
+        );
+      })}
+    </>
+  );
+  const _renderPricePlan = (value: string) => {
+    if (value === 'true') {
+      return <div className="icon-tone"></div>;
+    } else return <div>{value}</div>;
+  };
+
+  const _renderPlanComparisonMobile = () => {
+    return (
+      <div className={styles['mobile-ui']}>
+        <AppAccordion
+          content={_renderPlanItem}
+          className={'list-plan-mobile'}
+        />
+      </div>
+    );
+  };
+
+  const _renderPlanConparisonDesktop = () => {
+    return (
+      <div className={`${styles['plan-table']} ${styles['desktop-ui']}`}>
+        <div className={styles['plan-row']}>
+          <div className={styles['name-plan-cell']}></div>
+          <div
+            className={`${styles['free-plan-cell']} ${styles['title-plan']}`}
+          >
+            STARTER
+          </div>
+          <div
+            className={`${styles['starter-plan-cell']} ${styles['title-plan']}`}
+          >
+            BASIC
+          </div>
+          <div
+            className={`${styles['growth-plan-cell']} ${styles['title-plan']}`}
+          >
+            GROWTH
+          </div>
+          <div className={`${styles['pro-plan-cell']} ${styles['title-plan']}`}>
+            PROFESSIONAL
+          </div>
+        </div>
+        {LIST_NETWORK.map((plan, index) => {
+          return (
+            <div className={styles['plan-row']} key={`${index} plan`}>
+              <div className={styles['name-plan-cell']}>{plan.name}</div>
+              <div className={styles['free-plan-cell']}>
+                {_renderPricePlan(plan.free)}
+              </div>
+              <div className={styles['starter-plan-cell']}>
+                {_renderPricePlan(plan.starter)}
+              </div>
+              <div className={styles['growth-plan-cell']}>
+                {_renderPricePlan(plan.growth)}
+              </div>
+              <div className={styles['pro-plan-cell']}>
+                {_renderPricePlan(plan.professional)}
+              </div>
+            </div>
+          );
+        })}
+        <div className={styles['plan-row']}>
+          <div className={styles['name-plan-cell']}></div>
+          <div
+            className={`${styles['free-plan-cell']} ${styles['active-plan']}`}
+          >
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
+            <div className="icon-vector-right"></div>
+          </div>
+          <div
+            className={`${styles['starter-plan-cell']} ${styles['active-plan']}`}
+          >
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>{' '}
+            <div className="icon-vector-right"></div>
+          </div>
+          <div
+            className={`${styles['growth-plan-cell']} ${styles['active-plan']}`}
+          >
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
+
+            <div className="icon-vector-right"></div>
+          </div>
+          <div
+            className={`${styles['pro-plan-cell']} ${styles['active-plan']}`}
+          >
+            <div>
+              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                Get Started
+              </Link>
+            </div>
+            <div className="icon-vector-right"></div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className={styles['main-landing']}>
+      <div className={styles['introduction']}>
+        <h1
+          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+        >
+          Industry-leading <span>plans</span>, built for everyone
+        </h1>
+        <div className={styles['list-package']}>
+          {LIST_PACKAGE.map((item, index) => {
+            return (
+              <div className={styles['package']} key={`${index} package`}>
+                {item.BADGE ? (
+                  <div className={styles['badge-package']}>{item.BADGE}</div>
+                ) : (
+                  ''
+                )}
+                <div className={styles['name-package']}>{item.NAME}</div>
+                <div className={styles['price-package-wrap']}>
+                  {item.PRICE !== '0' && (
+                    <div className={styles['currency-package']}>$</div>
+                  )}
+                  <div className={styles['price-package']}>
+                    {item.PRICE === '0' ? 'Free' : item.PRICE}
+                  </div>
+                  {item.PRICE !== '0' ? (
+                    <div className={styles['time-package']}>/mo</div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+                {item.SERVICE.map((content, index) => {
+                  return (
+                    <div
+                      className={styles['service-package']}
+                      key={`${index} service`}
+                    >
+                      <div className={'icon-tone'}></div>{' '}
+                      <div className={styles['service-content']}>{content}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+        <h1
+          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+        >
+          Support the best <span>networks</span>
+        </h1>
+        <div className={styles['network-support']}>
+          <img src="/images/network-circle.png" alt="network circle" />
+        </div>
+        <h1
+          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+        >
+          <span>Plan</span> comparison
+        </h1>
+        {/* {!isMobile */}
+        {_renderPlanComparisonMobile()}
+        {_renderPlanConparisonDesktop()}
+
+        <h1
+          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+        >
+          Want to learn more? <span>Contact us</span>
+        </h1>
+        <div className={styles['button-network-wrap']}>
+          <div className={styles['button-network']}>
+            <div className={'icon-telegram'}></div>
+            <div>Telegram</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Pricing;
@@ -11,7 +362,7 @@ export default Pricing;
 Pricing.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
-      <Layout>{page}</Layout>
+      <Layout className="pricing-container">{page}</Layout>
     </>
   );
 };
