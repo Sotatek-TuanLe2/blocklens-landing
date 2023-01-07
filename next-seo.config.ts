@@ -50,7 +50,7 @@ interface ISeoConfigs {
   };
   openGraph?: OpenGraph;
   metaTags?: ReadonlyArray<MetaTag>;
-  linkTags?: ReadonlyArray<ILinkTag>
+  linkTags?: ReadonlyArray<ILinkTag>;
 }
 
 export const seoConfigs: ISeoConfigs = {
@@ -146,6 +146,11 @@ export const defaultSEO: NextSeoProps = {
         url: 'https://blocksniper.io/opengraph.jpeg?v=1',
       }
     ],
+  },
+  twitter:{
+    handle: '@handle',
+    site: '@site',
+    cardType: 'summary_large_image',
   },
   canonical: seoConfigs.url,
   additionalMetaTags: seoConfigs.metaTags,
