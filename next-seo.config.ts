@@ -103,7 +103,26 @@ export const seoConfigs: ISeoConfigs = {
     {
       httpEquiv: 'x-ua-compatible',
       content: 'IE=edge'
-    }
+    },
+    {
+      name: 'twitter:card',
+      content:'summary_large_image',
+    },
+    {
+      property:'twitter:domain',
+      content:'blocksniper.io',
+    },
+    {property:'twitter:url',
+  content:'https://blocksniper.io'},{
+    name:'twitter:title',
+    content:'Blocksniper',
+  },{
+    name:'twitter:description',
+    content:'Blocksniper pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
+  },{
+    name:'twitter:image',
+    content:'https://blocksniper.io/opengraph.jpeg?v=1',
+  }
   ],
   linkTags: [
     {
