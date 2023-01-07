@@ -171,11 +171,11 @@ export const defaultSEO: NextSeoProps = {
       }
     ],
   },
-  twitter: {
-    handle: '@handle',
-    site: '@site',
-    cardType: 'summary_large_image',
-  },
+  // twitter: {
+  //   handle: '@handle',
+  //   site: '@site',
+  //   cardType: 'summary_large_image',
+  // },
   canonical: seoConfigs.url,
   additionalMetaTags: seoConfigs.metaTags,
   additionalLinkTags: seoConfigs.linkTags,
