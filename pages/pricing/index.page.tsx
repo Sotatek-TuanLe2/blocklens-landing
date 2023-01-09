@@ -8,112 +8,21 @@ import {
   AccordionPanel,
   Box,
 } from '@chakra-ui/react';
-import { isMobile } from 'react-device-detect';
 import AppAccordion from 'components/AppAccordion';
-import { useRouter } from 'next/router';
-import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
+import {
+  BLOCKSNIPER_LOGIN_URL,
+  PRICING_NETWORKS,
+  PRICING_PACKAGES,
+  PRICING_PLANS,
+} from 'utils/constant';
 import Link from 'next/link';
 import { ProductJsonLd } from 'next-seo';
 import { productJsonLd } from 'next-seo.config';
 
-const LIST_PACKAGE = [
-  {
-    NAME: 'STARTER',
-    PRICE: '0',
-    SERVICE: ['2 apps', '100 messages/day', 'All supported chains'],
-    BADGE: '',
-  },
-  {
-    NAME: 'BASIC',
-    PRICE: '29',
-    SERVICE: ['5 apps', '500 messages/day', 'All supported chains'],
-    BADGE: '',
-  },
-  {
-    NAME: 'GROWTH',
-    PRICE: '119',
-    SERVICE: ['7 apps', '2,500 messages/day', 'All supported chains'],
-    BADGE: 'Popular',
-  },
-  {
-    NAME: 'PROFESSIONAL',
-    PRICE: '479',
-    SERVICE: ['15 apps', '12,000 messages/day', 'All supported chains'],
-    BADGE: '',
-  },
-];
-
-const LIST_NETWORK = [
-  {
-    name: 'Mainnet, Testnet',
-    free: 'true',
-    starter: 'true',
-    growth: 'true',
-    professional: 'true',
-  },
-  {
-    name: 'All supported chains',
-    free: 'true',
-    starter: 'true',
-    growth: 'true',
-    professional: 'true',
-  },
-  {
-    name: 'Apps',
-    free: '2',
-    starter: '5',
-    growth: '7',
-    professional: '15',
-  },
-  {
-    name: 'Daily messages',
-    free: '100',
-    starter: '500',
-    growth: '2,500',
-    professional: '12,000',
-  },
-];
-
-const LIST_PLAN = [
-  {
-    name: 'STARTER',
-    mainTestNet: 'Mainnet, TestNet',
-    archiveDate: 'All supported chains',
-    activeApps: '2 apps',
-    messagesCount: '100 messsages/day',
-    linkStarted: '/',
-  },
-  {
-    name: 'BASIC',
-    mainTestNet: 'Mainnet, TestNet',
-    archiveDate: 'All supported chains',
-    activeApps: '5 apps',
-    messagesCount: '500 messsages/day',
-    linkStarted: '/',
-  },
-  {
-    name: 'GROWTH',
-    mainTestNet: 'Mainnet, TestNet',
-    archiveDate: 'All supported chains',
-    activeApps: '7 apps',
-    messagesCount: '2,500 messsages/day',
-    linkStarted: '/',
-  },
-  {
-    name: 'PROFESSIONAL',
-    mainTestNet: 'Mainnet, TestNet',
-    archiveDate: 'All supported chains',
-    activeApps: '15 apps',
-    messagesCount: '12,000 messsages/day',
-    linkStarted: '/',
-  },
-];
-
 const Pricing = () => {
-  const router = useRouter();
   const _renderPlanItem = () => (
     <>
-      {LIST_PLAN.map((plan, index) => {
+      {PRICING_PLANS.map((plan, index) => {
         return (
           <AccordionItem
             key={`${index} plan mobile`}
@@ -213,7 +122,7 @@ const Pricing = () => {
             PROFESSIONAL
           </div>
         </div>
-        {LIST_NETWORK.map((plan, index) => {
+        {PRICING_NETWORKS.map((plan, index) => {
           return (
             <div className={styles['plan-row']} key={`${index} plan`}>
               <div className={styles['name-plan-cell']}>{plan.name}</div>
@@ -289,7 +198,7 @@ const Pricing = () => {
           Industry-leading <span>plans</span>, built for everyone
         </h1>
         <div className={styles['list-package']}>
-          {LIST_PACKAGE.map((item, index) => {
+          {PRICING_PACKAGES.map((item, index) => {
             return (
               <div className={styles['package']} key={`${index} package`}>
                 {item.BADGE ? (
@@ -339,7 +248,6 @@ const Pricing = () => {
         >
           <span>Plan</span> comparison
         </h1>
-        {/* {!isMobile */}
         {_renderPlanComparisonMobile()}
         {_renderPlanConparisonDesktop()}
 
