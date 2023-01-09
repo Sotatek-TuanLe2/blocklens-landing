@@ -242,3 +242,19 @@ export const productJsonLd: ProductJsonLdProps = {
     }
   ]
 };
+
+export const organizationJsonLd: OrganizationJsonLdProps = {
+  type: 'Corporation',
+  logo: '/images/sotalabs-logo.svg',
+  legalName: seoConfigs.organization.legalName,
+  name: seoConfigs.organization.name,
+  address: '2F, CIC Tower, No.2 Nguyen Thi Due, Yen Hoa, Cau Giay, Hanoi, Vietnam',
+  contactPoints: [
+    {
+      contactType: 'customer service',
+      telephone: seoConfigs.contact.phone.number,
+      email: seoConfigs.contact.email
+    },
+  ],
+  url: seoConfigs.contact.website
+};
