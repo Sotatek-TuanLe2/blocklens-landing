@@ -4,8 +4,8 @@ import styles from 'styles/LandingPage.module.scss';
 import Link from 'next/link';
 import MainImageLanding from 'components/MainImageLanding';
 import {
-  BLOCKSNIPER_LOGIN_URL,
-  BLOCKSNIPER_SINGUP_URL,
+  BLOCKLENS_LOGIN_URL,
+  BLOCKLENS_SINGUP_URL,
   LANDING_FEATURES,
   LANDING_FEEDBACKS,
   LANDING_USE_CASES,
@@ -23,11 +23,11 @@ const Home = () => {
         Listen to <span>on-chain</span> activities
       </h1>
       <div className={styles['introduction__description']}>
-        Block Sniper pushes on-chain events to your back-end web hooks.
-        Reliable, configurable, real-time. Get started for free now!
+        Block Lens pushes on-chain events to your back-end web hooks. Reliable,
+        configurable, real-time. Get started for free now!
       </div>
       <div className={styles['introduction__btn']}>
-        <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
+        <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
           <button className={styles['btn-primary']}>Get Started</button>
         </Link>
       </div>
@@ -131,12 +131,12 @@ const Home = () => {
         Get <span> started </span> now
       </h1>
       <div className={styles['get-start__description']}>
-        Block Sniper gives you, the developers, the UX you demand and deserve,
+        Block Lens gives you, the developers, the UX you demand and deserve,
         with no custom code.
       </div>
 
       <div className={styles['get-start__btn']}>
-        <Link href={BLOCKSNIPER_SINGUP_URL} target="_blank">
+        <Link href={BLOCKLENS_SINGUP_URL} target="_blank">
           <button className={styles['btn-primary']}>Sign Up</button>
         </Link>
       </div>

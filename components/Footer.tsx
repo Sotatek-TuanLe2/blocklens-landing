@@ -39,10 +39,10 @@ const Footer = () => {
         <img src="/images/logo.png" alt="logo" />
 
         <div className={styles['description']}>
-          Block Sniper pushes on-chain events to your back-end web hooks.
+          Block Lens pushes on-chain events to your back-end web hooks.
           Reliable, configurable, real-time. Get started for free now!
         </div>
-        <div className={styles['name']}>© 2022, Block Sniper</div>
+        <div className={styles['name']}>© 2022, Block Lens</div>
       </div>
 
       <div className={styles['menus-link']}>

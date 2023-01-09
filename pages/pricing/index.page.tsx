@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import AppAccordion from 'components/AppAccordion';
 import {
-  BLOCKSNIPER_LOGIN_URL,
+  BLOCKLENS_LOGIN_URL,
   PRICING_NETWORKS,
   PRICING_PACKAGES,
   PRICING_PLANS,
@@ -128,7 +128,7 @@ const Pricing = () => {
                   </div>
                   <div className={styles['active-plan-btn']}>
                     <div>
-                      <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+                      <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
                         Get Started
                       </Link>
                     </div>
@@ -209,7 +209,7 @@ const Pricing = () => {
             className={`${styles['free-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
                 Get Started
               </Link>
             </div>
@@ -219,7 +219,7 @@ const Pricing = () => {
             className={`${styles['starter-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
                 Get Started
               </Link>
             </div>{' '}
@@ -229,7 +229,7 @@ const Pricing = () => {
             className={`${styles['growth-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
                 Get Started
               </Link>
             </div>
@@ -240,7 +240,7 @@ const Pricing = () => {
             className={`${styles['pro-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKSNIPER_LOGIN_URL} target={'_blank'}>
+              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
                 Get Started
               </Link>
             </div>

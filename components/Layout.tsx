@@ -4,7 +4,7 @@ import Script from 'next/script';
 import Footer from './Footer';
 import Header from './Header';
 import { defaultSEO } from 'next-seo.config';
-import { BLOCKSNIPER_LIVECHAT_SCRIPT } from 'utils/constant';
+import { BLOCKLENS_LIVECHAT_SCRIPT } from 'utils/constant';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ const Layout = (props: LayoutProps) => {
   }, []);
 
   const _renderLiveChatButton = () => (
-    <Script src={BLOCKSNIPER_LIVECHAT_SCRIPT} strategy="lazyOnload" />
+    <Script src={BLOCKLENS_LIVECHAT_SCRIPT} strategy="lazyOnload" />
   );
 
   return (

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FC, useState } from 'react';
 import { CloseMenuIcon, IconMenuMobile } from 'components/Icons';
 import styles from 'styles/components/Header.module.scss';
-import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
+import { BLOCKLENS_LOGIN_URL } from 'utils/constant';
 
 interface IHeader {
   isFixedHeader: boolean;
@@ -62,7 +62,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
               );
             })}
             <div>
-              <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
+              <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -92,7 +92,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
           })}
 
           <div>
-            <Link href={BLOCKSNIPER_LOGIN_URL} target="_blank">
+            <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>
