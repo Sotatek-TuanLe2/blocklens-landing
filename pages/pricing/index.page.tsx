@@ -13,6 +13,8 @@ import AppAccordion from 'components/AppAccordion';
 import { useRouter } from 'next/router';
 import { BLOCKSNIPER_LOGIN_URL } from 'utils/constant';
 import Link from 'next/link';
+import { ProductJsonLd } from 'next-seo';
+import { productJsonLd } from 'next-seo.config';
 
 const LIST_PACKAGE = [
   {
@@ -362,7 +364,10 @@ export default Pricing;
 Pricing.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
-      <Layout className="pricing-container">{page}</Layout>
+      <Layout className="pricing-container">
+        <ProductJsonLd {...productJsonLd} />
+        {page}
+      </Layout>
     </>
   );
 };
