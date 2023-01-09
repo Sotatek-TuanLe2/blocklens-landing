@@ -45,7 +45,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
       <div className={styles['content']}>
         <div>
           <Link href={'/'}>
-            <img src="/images/logo.png" alt="logo" />
+            <img src="/images/logo.png?v=0.0.1" alt="logo" />
           </Link>
         </div>
         <div className={`${styles['desktop-ui']}`}>
