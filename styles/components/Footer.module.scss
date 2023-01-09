@@ -1,20 +1,22 @@
 @import '../_color-variables.scss';
 @import '../_mixins.scss';
 @import '../_variables.scss';
+
 .footer-landing {
-  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+  border-top: 0.5px solid rgba(255, 255, 255, 40%);
   max-width: 1178px;
   margin: 0 auto;
-  padding: 80px 24px 70px 24px;
+  padding: 80px 24px 70px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 
   @include tablet {
     flex-direction: column;
-    padding: 60px 24px 60px 24px;
+    padding: 60px 24px;
   }
 }
+
 .box-info {
   width: 45%;
   font-weight: 400;
@@ -55,6 +57,7 @@
     width: 100%;
   }
 }
+
 .menus {
   font-weight: 400;
   font-size: 14px;

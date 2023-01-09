@@ -74,7 +74,11 @@ const Home = () => {
                     {item.description}
                   </div>
                 </div>
-                <img src={`/images/${item.image}`} alt={`use-case-${index}`} />
+                <img
+                  src={`/images/${item.image}`}
+                  alt={`use-case-${index}`}
+                  className={styles['use-case-img']}
+                />
               </div>
             </div>
           );

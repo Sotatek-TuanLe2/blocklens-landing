@@ -1,5 +1,6 @@
 @import './_color-variables.scss';
 @import './_mixins.scss';
+
 .landingpage {
   .introduction {
     margin: 0 auto;
@@ -66,14 +67,14 @@
   }
 
   .image-main {
-    margin: 160px 0 180px 0;
+    margin: 160px 0 180px;
 
     img {
       margin: 0 auto;
     }
 
     @include tablet {
-      margin: 80px 0 120px 0;
+      margin: 80px 0 120px;
     }
   }
 
@@ -88,6 +89,7 @@
 
       @include tablet {
         flex-direction: column;
+
         img {
           width: 70%;
           margin-left: auto;
@@ -144,6 +146,7 @@
         margin-bottom: 70px;
       }
     }
+
     .use-case-wrap {
       &:nth-child(2n) {
         .reverse {
@@ -154,6 +157,7 @@
           }
         }
       }
+
       .use-case {
         display: flex;
         justify-content: space-between;
@@ -165,7 +169,7 @@
           margin-bottom: 60px;
         }
 
-        img {
+        img.use-case-img {
           max-width: 40%;
 
           @include tablet {
@@ -228,6 +232,7 @@
         color: $link;
       }
     }
+
     img {
       margin: 0 auto;
     }
@@ -272,6 +277,7 @@
         &::-webkit-scrollbar {
           display: none; /* Safari and Chrome */
         }
+
         width: calc(100% + 24px);
       }
     }
@@ -279,11 +285,11 @@
     &__item {
       background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(34, 108, 255, 0.24) 100%
+        rgba(255, 255, 255, 0%) 0,
+        rgba(34, 108, 255, 24%) 100%
       );
-      border: 1px solid rgba(34, 108, 255, 0.24);
-      filter: drop-shadow(0px 18px 24px rgba(136, 225, 220, 0.08));
+      border: 1px solid rgba(34, 108, 255, 24%);
+      filter: drop-shadow(0 18px 24px rgba(136, 225, 220, 8%));
       backdrop-filter: blur(8px);
       border-radius: 40px;
       padding: 40px 25px;
@@ -312,7 +318,7 @@
     margin: 160px 0;
 
     @include tablet {
-      margin: 140px 0 120px 0;
+      margin: 140px 0 120px;
     }
 
     &__heading {
@@ -359,6 +365,7 @@
       }
     }
   }
+
   .btn-primary {
     background: linear-gradient(225deg, #226cff 14.89%, #1084ff 85.85%);
     border-radius: 10px;
@@ -370,5 +377,6 @@
     font-family: 'Anderson Grotesk Bold', sans-serif;
     border: transparent;
   }
+
   color: $title;
 }
