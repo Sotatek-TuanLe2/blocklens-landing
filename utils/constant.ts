@@ -1,6 +1,6 @@
-export const BLOCKSNIPER_LOGIN_URL = 'https://blocksniper.io/login';
-export const BLOCKSNIPER_SINGUP_URL = 'https://blocksniper.io/sign-up';
-export const BLOCKSNIPER_LIVECHAT_SCRIPT =
+export const BLOCKLENS_LOGIN_URL = 'https://console.blocklens.io/login';
+export const BLOCKLENS_SINGUP_URL = 'https://console.blocklens.io/sign-up';
+export const BLOCKLENS_LIVECHAT_SCRIPT =
   '//code.tidio.co/xf1rnuwtrz8ldu8dkp2l0twgubtfztyb.js';
 
 export const LANDING_FEATURES: {
@@ -17,7 +17,7 @@ export const LANDING_FEATURES: {
   {
     name: 'Advanced events',
     description:
-      'Not just address and NFT, Block Sniper allows developers to upload their smart contract ABI and specify which one to listen to.',
+      'Not just address and NFT, Block Lens allows developers to upload their smart contract ABI and specify which one to listen to.',
     image: 'advanced-events.png',
   },
   {
@@ -68,19 +68,19 @@ export const LANDING_FEEDBACKS: {
     name: 'Leo',
     title: 'CEO Fizen',
     description:
-      'Block Sniper saved us 2 months of development with its no-code platform. On-chain synchronization is a must for web3 application and develop it by ourself is extremely time consuming.',
+      'Block Lens saved us 2 months of development with its no-code platform. On-chain synchronization is a must for web3 application and develop it by ourself is extremely time consuming.',
   },
   {
     name: 'Thi Truong',
     title: 'Founder gamefi.org',
     description:
-      'Thanks to Block Sniper, we’ve cut our spend for infrastructure. Maintaining a blockchain node or hosting blockchain crawler servers is costly nowaday.',
+      'Thanks to Block Lens, we’ve cut our spend for infrastructure. Maintaining a blockchain node or hosting blockchain crawler servers is costly nowaday.',
   },
   {
     name: 'Louis',
     title: 'Founder Crypto Hawk',
     description:
-      'Building dApp has never been easier with Block Sniper. It supports everything we need to make our platform aware of on-chain events and keep our users engaged with the application.',
+      'Building dApp has never been easier with Block Lens. It supports everything we need to make our platform aware of on-chain events and keep our users engaged with the application.',
   },
 ];
 

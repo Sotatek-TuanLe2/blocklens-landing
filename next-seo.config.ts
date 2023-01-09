@@ -54,11 +54,11 @@ interface ISeoConfigs {
 }
 
 export const seoConfigs: ISeoConfigs = {
-  title: 'Blocksniper',
-  description: 'Blocksniper pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
-  siteName: 'Blocksniper',
+  title: 'Blocklens',
+  description: 'Blocklens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
+  siteName: 'Blocklens',
   logo: '/favicon.ico',
-  url: 'https://blocksniper.io',
+  url: 'https://blocklens.io',
   contact: {
     phone: {
       number: '02466585248',
@@ -110,23 +110,23 @@ export const seoConfigs: ISeoConfigs = {
     },
     {
       property: 'twitter:domain',
-      content: 'blocksniper.io',
+      content: 'blocklens.io',
     },
     {
       property: 'twitter:url',
-      content: 'https://blocksniper.io'
+      content: 'https://blocklens.io'
     },
     {
       name: 'twitter:title',
-      content: 'Blocksniper',
+      content: 'Blocklens',
     },
     {
       name: 'twitter:description',
-      content: 'Blocksniper pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
+      content: 'Blocklens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
     },
     {
       name: 'twitter:image',
-      content: 'https://blocksniper.io/opengraph.jpeg?v=1',
+      content: '/opengraph.jpg',
     }
   ],
   linkTags: [
@@ -167,7 +167,7 @@ export const defaultSEO: NextSeoProps = {
     description: seoConfigs.description,
     images: [
       {
-        url: 'https://blocksniper.io/opengraph.jpeg?v=1',
+        url: '/opengraph.jpg',
       }
     ],
   },
@@ -191,21 +191,21 @@ export const productJsonLd: ProductJsonLdProps = {
   reviews: [
     {
       author: 'Leo - CEO Fizen',
-      reviewBody: 'Block Sniper saved us 2 months of development with its no-code platform. On-chain synchronization is a must for web3 application and develop it by ourself is extremely time consuming.',
+      reviewBody: 'Block Lens saved us 2 months of development with its no-code platform. On-chain synchronization is a must for web3 application and develop it by ourself is extremely time consuming.',
       reviewRating: {
         ratingValue: '5'
       }
     },
     {
       author: 'Thi Truong - Founder gamefi.org',
-      reviewBody: 'Thanks to Block Sniper, we’ve cut our spend for infrastructure. Maintaining a blockchain node or hosting blockchain crawler servers is costly nowaday.',
+      reviewBody: 'Thanks to Block Lens, we’ve cut our spend for infrastructure. Maintaining a blockchain node or hosting blockchain crawler servers is costly nowaday.',
       reviewRating: {
         ratingValue: '5'
       }
     },
     {
       author: 'Louis - Founder Crypto Hawk',
-      reviewBody: 'Building dApp has never been easier with Block Sniper. It supports everything we need to make our platform aware of on-chain events and keep our users engaged with the application.',
+      reviewBody: 'Building dApp has never been easier with Block Lens. It supports everything we need to make our platform aware of on-chain events and keep our users engaged with the application.',
       reviewRating: {
         ratingValue: '5'
       }
