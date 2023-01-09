@@ -20,6 +20,67 @@ import { ProductJsonLd } from 'next-seo';
 import { productJsonLd } from 'next-seo.config';
 
 const Pricing = () => {
+  const _renderPrice = () => (
+    <>
+      <h1
+        className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+      >
+        Industry-leading <span>plans</span>, built for everyone
+      </h1>
+      <div className={styles['list-package']}>
+        {PRICING_PACKAGES.map((item, index) => {
+          return (
+            <div className={styles['package']} key={`${index} package`}>
+              {item.BADGE ? (
+                <div className={styles['badge-package']}>{item.BADGE}</div>
+              ) : (
+                ''
+              )}
+              <div className={styles['name-package']}>{item.NAME}</div>
+              <div className={styles['price-package-wrap']}>
+                {item.PRICE !== '0' && (
+                  <div className={styles['currency-package']}>$</div>
+                )}
+                <div className={styles['price-package']}>
+                  {item.PRICE === '0' ? 'Free' : item.PRICE}
+                </div>
+                {item.PRICE !== '0' ? (
+                  <div className={styles['time-package']}>/mo</div>
+                ) : (
+                  ''
+                )}
+              </div>
+              {item.SERVICE.map((content, index) => {
+                return (
+                  <div
+                    className={styles['service-package']}
+                    key={`${index} service`}
+                  >
+                    <div className={'icon-tone'}></div>{' '}
+                    <div className={styles['service-content']}>{content}</div>
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+
+  const _renderBanner = () => (
+    <>
+      <h1
+        className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+      >
+        Support the best <span>networks</span>
+      </h1>
+      <div className={styles['network-support']}>
+        <img src="/images/network-circle.png" alt="network circle" />
+      </div>
+    </>
+  );
+
   const _renderPlanItem = () => (
     <>
       {PRICING_PLANS.map((plan, index) => {
@@ -81,6 +142,7 @@ const Pricing = () => {
       })}
     </>
   );
+
   const _renderPricePlan = (value: string) => {
     if (value === 'true') {
       return <div className="icon-tone"></div>;
@@ -189,79 +251,41 @@ const Pricing = () => {
     );
   };
 
+  const _renderPlan = () => (
+    <>
+      <h1
+        className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+      >
+        <span>Plan</span> comparison
+      </h1>
+      {_renderPlanComparisonMobile()}
+      {_renderPlanConparisonDesktop()}
+    </>
+  );
+
+  const _renderCTA = () => (
+    <>
+      <h1
+        className={`${styles['introduction__main-text']} ${styles['price-text']}`}
+      >
+        Want to learn more? <span>Contact us</span>
+      </h1>
+      <div className={styles['button-network-wrap']}>
+        <div className={styles['button-network']}>
+          <div className={'icon-telegram'}></div>
+          <div>Telegram</div>
+        </div>
+      </div>
+    </>
+  );
+
   return (
     <div className={styles['main-landing']}>
       <div className={styles['introduction']}>
-        <h1
-          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
-        >
-          Industry-leading <span>plans</span>, built for everyone
-        </h1>
-        <div className={styles['list-package']}>
-          {PRICING_PACKAGES.map((item, index) => {
-            return (
-              <div className={styles['package']} key={`${index} package`}>
-                {item.BADGE ? (
-                  <div className={styles['badge-package']}>{item.BADGE}</div>
-                ) : (
-                  ''
-                )}
-                <div className={styles['name-package']}>{item.NAME}</div>
-                <div className={styles['price-package-wrap']}>
-                  {item.PRICE !== '0' && (
-                    <div className={styles['currency-package']}>$</div>
-                  )}
-                  <div className={styles['price-package']}>
-                    {item.PRICE === '0' ? 'Free' : item.PRICE}
-                  </div>
-                  {item.PRICE !== '0' ? (
-                    <div className={styles['time-package']}>/mo</div>
-                  ) : (
-                    ''
-                  )}
-                </div>
-                {item.SERVICE.map((content, index) => {
-                  return (
-                    <div
-                      className={styles['service-package']}
-                      key={`${index} service`}
-                    >
-                      <div className={'icon-tone'}></div>{' '}
-                      <div className={styles['service-content']}>{content}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
-        <h1
-          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
-        >
-          Support the best <span>networks</span>
-        </h1>
-        <div className={styles['network-support']}>
-          <img src="/images/network-circle.png" alt="network circle" />
-        </div>
-        <h1
-          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
-        >
-          <span>Plan</span> comparison
-        </h1>
-        {_renderPlanComparisonMobile()}
-        {_renderPlanConparisonDesktop()}
-
-        <h1
-          className={`${styles['introduction__main-text']} ${styles['price-text']}`}
-        >
-          Want to learn more? <span>Contact us</span>
-        </h1>
-        <div className={styles['button-network-wrap']}>
-          <div className={styles['button-network']}>
-            <div className={'icon-telegram'}></div>
-            <div>Telegram</div>
-          </div>
-        </div>
+        {_renderPrice()}
+        {_renderBanner()}
+        {_renderPlan()}
+        {_renderCTA()}
       </div>
     </div>
   );
