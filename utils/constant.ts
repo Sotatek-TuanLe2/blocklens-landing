@@ -1,5 +1,11 @@
-export const BLOCKLENS_LOGIN_URL = 'https://console.blocklens.io/login';
-export const BLOCKLENS_SINGUP_URL = 'https://console.blocklens.io/sign-up';
+export const BLOCKLENS_LOGIN_URL =
+  process.env.NEXT_PUBLIC_ENV === 'dev'
+    ? 'https://dev-blocksniper.bunicorn.finance/login'
+    : 'https://console.blocklens.io/login';
+export const BLOCKLENS_SINGUP_URL =
+  process.env.NEXT_PUBLIC_ENV === 'dev'
+    ? 'https://dev-blocksniper.bunicorn.finance/sign-up'
+    : 'https://console.blocklens.io/sign-up';
 export const BLOCKLENS_LIVECHAT_SCRIPT =
   '//code.tidio.co/xf1rnuwtrz8ldu8dkp2l0twgubtfztyb.js';
 
