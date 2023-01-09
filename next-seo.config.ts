@@ -175,3 +175,70 @@ export const defaultSEO: NextSeoProps = {
   additionalMetaTags: seoConfigs.metaTags,
   additionalLinkTags: seoConfigs.linkTags,
 };
+
+export const productJsonLd: ProductJsonLdProps = {
+  productName: seoConfigs.title,
+  images: [
+    seoConfigs.logo,
+    '/images/chart.png'
+  ],
+  description: seoConfigs.description,
+  brand: seoConfigs.organization.name,
+  manufacturerName: seoConfigs.organization.legalName,
+  slogan: 'Listen to on-chain activities',
+  disambiguatingDescription: 'Blockchain made simple. Remove the hassle of syncing and maintaining data/transactions between on-chain and off-chain. No fullnode setup, No code, Multichain.',
+  releaseDate: '2022',
+  reviews: [
+    {
+      author: 'Leo - CEO Fizen',
+      reviewBody: 'Block Sniper saved us 2 months of development with its no-code platform. On-chain synchronization is a must for web3 application and develop it by ourself is extremely time consuming.',
+      reviewRating: {
+        ratingValue: '5'
+      }
+    },
+    {
+      author: 'Thi Truong - Founder gamefi.org',
+      reviewBody: 'Thanks to Block Sniper, we’ve cut our spend for infrastructure. Maintaining a blockchain node or hosting blockchain crawler servers is costly nowaday.',
+      reviewRating: {
+        ratingValue: '5'
+      }
+    },
+    {
+      author: 'Louis - Founder Crypto Hawk',
+      reviewBody: 'Building dApp has never been easier with Block Sniper. It supports everything we need to make our platform aware of on-chain events and keep our users engaged with the application.',
+      reviewRating: {
+        ratingValue: '5'
+      }
+    }
+  ],
+  offers: [
+    {
+      price: 'Free',
+      priceCurrency: 'USD',
+      seller: {
+        name: 'STARTER'
+      }
+    },
+    {
+      price: '29',
+      priceCurrency: 'USD',
+      seller: {
+        name: 'BASIC'
+      }
+    },
+    {
+      price: '119',
+      priceCurrency: 'USD',
+      seller: {
+        name: 'GROWTH'
+      }
+    },
+    {
+      price: '479',
+      priceCurrency: 'USD',
+      seller: {
+        name: 'PROFESSIONAL'
+      }
+    }
+  ]
+};

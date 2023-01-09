@@ -5,6 +5,8 @@ import { isMobile } from 'react-device-detect';
 import Link from 'next/link';
 import MainImageLanding from 'components/MainImageLanding';
 import { BLOCKSNIPER_LOGIN_URL, BLOCKSNIPER_SINGUP_URL } from 'utils/constant';
+import { ProductJsonLd } from 'next-seo';
+import { productJsonLd } from 'next-seo.config';
 
 const categories = [
   {
@@ -220,7 +222,10 @@ export default Home;
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
-      <Layout>{page}</Layout>
+      <Layout>
+        <ProductJsonLd {...productJsonLd} />
+        {page}
+      </Layout>
     </>
   );
 };
