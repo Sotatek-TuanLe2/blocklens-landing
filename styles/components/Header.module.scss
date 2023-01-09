@@ -13,6 +13,7 @@
 
   @include tablet {
     padding: 24px 0;
+
     &.mobile {
       height: 100vh;
       background-image: url('/images/bg-menu-mobile.png');
@@ -38,10 +39,12 @@
       background: #226cff;
     }
   }
+
   .menus {
     display: flex;
     align-items: center;
     height: 100%;
+
     .menu {
       font-family: 'Anderson Grotesk Bold', sans-serif;
       font-weight: 700;
@@ -64,6 +67,7 @@
     align-items: center;
     font-family: 'Anderson Grotesk', sans-serif;
     justify-content: center;
+
     a {
       display: block;
       color: $title;
@@ -71,9 +75,10 @@
       font-weight: 700;
       font-size: 18px;
       line-height: 140%;
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
+
   &.fixed {
     background-color: $bg1;
   }
@@ -88,6 +93,7 @@
 
     @include tablet {
       align-items: center;
+
       img {
         width: 125px;
       }
@@ -101,6 +107,7 @@
     display: none;
   }
 }
+
 .mobile-ui {
   display: none;
   @include tablet {

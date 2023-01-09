@@ -29,9 +29,11 @@
   src: url('/fonts/AndersonGrotesk-Bold.otf');
   font-weight: 700;
 }
+
 body {
-  margin: 0px;
+  margin: 0;
 }
+
 a {
   text-decoration: none;
 }
@@ -47,13 +49,15 @@ img {
   background-size: cover;
   width: 100%;
   font-family: 'Anderson Grotesk Light', sans-serif;
+
   .content-container {
     min-height: 100vh;
     margin: 0 auto;
     max-width: 1178px;
-    padding: 0px 24px 0 24px;
+    padding: 0 24px;
   }
 }
+
 .pricing-container {
   background-image: url('/images/bg-price-page.png');
 }
@@ -63,6 +67,7 @@ img {
   height: 24px;
   background: url('/images/icon_social_media.png') -54px -10px;
 }
+
 .icon-telegram {
   width: 24px;
   height: 25px;

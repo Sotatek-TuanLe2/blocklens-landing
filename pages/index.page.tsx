@@ -145,6 +145,7 @@ const Home = () => {
                         </div>
                       </div>
                       <img
+                        className={styles['use-case-img']}
                         src={`/images/${item.image}`}
                         alt={`use-case-${index}`}
                       />
