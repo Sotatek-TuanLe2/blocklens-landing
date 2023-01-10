@@ -28,7 +28,7 @@ const linkTerms = [
   },
   {
     name: 'Terms of Service',
-    path: '/terms-of-service',
+    path: '/terms',
   },
 ];
 
