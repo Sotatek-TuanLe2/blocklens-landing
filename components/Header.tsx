@@ -22,7 +22,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
     },
     {
       name: 'About us',
-      path: '/',
+      path: '/about-us',
     },
     {
       name: 'Pricing',

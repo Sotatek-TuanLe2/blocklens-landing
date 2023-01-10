@@ -1,0 +1,509 @@
+@import './_color-variables.scss';
+@import './_mixins.scss';
+
+.about-us-wrap {
+  margin: 0 auto;
+  padding-top: 200px;
+  color: $title;
+  @include tablet {
+    padding-top: 108px;
+  }
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content-intro {
+      max-width: 49.5%;
+      .title-intro {
+        font-weight: 400;
+        font-size: 80px;
+        line-height: 120%;
+        text-align: center;
+        color: $title;
+        max-width: 940px;
+        margin: 0 auto;
+        margin-top: 8px;
+        font-family: 'Spline Sans Mono', sans-serif;
+        span {
+          color: $link;
+        }
+      }
+
+      .des-intro {
+        font-size: 18px;
+        margin-top: 30px;
+        p {
+          &:first-child {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .image-intro-wrap {
+      max-width: 49.5%;
+      position: relative;
+      .image-intro {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+      }
+      .image-logo {
+        position: absolute;
+        left: 12%;
+        top: 16%;
+
+        z-index: 0;
+        animation: example 8s forwards infinite linear;
+      }
+    }
+    @include tablet {
+      &.intro-mobile {
+        flex-direction: column;
+        .content-intro {
+          max-width: 100%;
+          .title-intro {
+            font-size: 48px;
+            text-align: left;
+            span {
+              display: block;
+            }
+          }
+          .des-intro {
+            margin-top: 28px;
+          }
+        }
+        .image-intro-wrap {
+          max-width: 100%;
+          margin-top: 42px;
+          .image-logo {
+            svg {
+              width: 122px;
+              height: 122px;
+            }
+            left: 20%;
+            top: 22%;
+          }
+        }
+      }
+    }
+    @include mobile {
+      &.intro-mobile {
+        .image-intro-wrap {
+          .image-logo {
+            svg {
+              width: 122px;
+              height: 122px;
+            }
+            left: 10%;
+            top: 14%;
+          }
+        }
+      }
+    }
+  }
+  .sota-company {
+    margin-top: 120px;
+    .title-company-mobile {
+      display: none;
+      @include tablet {
+        display: block;
+        color: $paragraph;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        text-align: center;
+      }
+    }
+    .title-company {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $paragraph;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      span {
+        margin-right: 14px;
+        padding-left: 14px;
+      }
+      img {
+        padding-right: 14px;
+      }
+
+      .divider {
+        background-color: #ffffff80;
+
+        flex: 1;
+        height: 0.5px;
+      }
+    }
+    .name-sub-companys {
+      margin-top: 62px;
+      padding-bottom: 141px;
+      .logo-sotatek {
+        cursor: pointer;
+        width: 135px;
+        height: 50px;
+        background: url('/images/logo-company.png') -10px -10px;
+        &:hover {
+          background: url('/images/logo-company-hover.png') -10px -10px;
+        }
+      }
+      .logo-ekoios {
+        cursor: pointer;
+        width: 135px;
+        height: 50px;
+        background: url('/images/logo-company.png') -10px -122px;
+        &:hover {
+          background: url('/images/logo-company-hover.png')-10px -122px;
+        }
+      }
+      .logo-sotanext {
+        cursor: pointer;
+        width: 153px;
+        height: 32px;
+        background: url('/images/logo-company.png') -10px -80px;
+        &:hover {
+          background: url('/images/logo-company-hover.png') -10px -80px;
+        }
+      }
+      .logo-icetea {
+        cursor: pointer;
+        width: 162px;
+        height: 30px;
+        background: url('/images/logo-company.png') -165px -10px;
+        &:hover {
+          background: url('/images/logo-company-hover.png') -165px -10px;
+        }
+      }
+    }
+    @include tablet {
+      .name-sub-companys {
+        padding-bottom: 120px;
+      }
+      .title-company {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  .about-sotatek {
+    padding-bottom: 140px;
+    display: flex;
+    flex-direction: column;
+    .title-about-sotatek {
+      padding: 0 169px;
+      text-align: center;
+      margin-bottom: 54px;
+      span {
+        color: $link;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        letter-spacing: 0.14rem;
+        font-weight: 700;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 40px;
+        text-align: center;
+      }
+    }
+    .desc-about-sotatek {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .img-desc,
+      .content-desc {
+        width: 49.5%;
+        font-size: 18px;
+      }
+      .img-desc {
+        display: flex;
+        justify-content: center;
+      }
+      .content-desc {
+        p {
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .img-desc {
+        position: relative;
+        cursor: pointer;
+        .btn-play-video {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    @include tablet {
+      padding-bottom: 120px;
+      .title-about-sotatek {
+        padding: 0 20px;
+        p {
+          font-size: 32px;
+        }
+      }
+      .desc-about-sotatek {
+        flex-direction: column;
+        .img-desc,
+        .content-desc {
+          width: 100%;
+        }
+        .content-desc {
+          margin-top: 38px;
+        }
+      }
+    }
+  }
+  .milestones {
+    .milestones-title {
+      padding-bottom: 80px;
+      text-align: center;
+      font-size: 60px;
+      span {
+        font-size: 20px;
+        color: $link;
+        text-transform: uppercase;
+        letter-spacing: 0.14rem;
+        font-weight: 700;
+      }
+      p {
+        font-family: 'Spline Sans Mono', sans-serif;
+      }
+
+      @include tablet {
+        font-size: 48px;
+      }
+    }
+    .milestones-desc {
+      @include laptop {
+        display: none;
+      }
+    }
+    .milestiones-desc-mobile {
+      display: none;
+      @include laptop {
+        display: block;
+        margin-bottom: 120px;
+        .element-timeline {
+          margin-bottom: 14px;
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) -24.6%,
+            rgba(34, 108, 255, 0.24) 100%
+          );
+          border: 1px solid rgba(34, 108, 255, 0.3);
+          border-radius: 20px;
+          font-family: 'Anderson Grotesk Light', sans-serif;
+          box-shadow: none;
+          font-size: 14px;
+          backdrop-filter: blur(8px);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 17px;
+          span {
+            margin-right: 24px;
+            max-width: 70%;
+          }
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(
+              268.85deg,
+              #226cff 22.48%,
+              #1084ff 83.59%
+            );
+            border-radius: 9999px;
+          }
+          &:hover {
+            filter: drop-shadow(0px 10px 50px rgba(34, 108, 255, 0.5));
+            box-shadow: 0 10px 10px #226cff4d;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .awards {
+    width: 100%;
+    margin-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 120px;
+
+    .content-awards {
+      width: 38%;
+      .title-awards {
+        font-size: 60px;
+        font-family: 'Spline Sans Mono';
+        span {
+          color: $link;
+        }
+        margin-bottom: 20px;
+      }
+      .desc-awards {
+        font-size: 18px;
+        margin-bottom: 32px;
+      }
+      .navigate-btn {
+        margin-bottom: 48px;
+        div {
+          :last-child {
+            margin-left: 20px;
+          }
+        }
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+    .btn-read-more,
+    .btn-read-more-mobile {
+      background: linear-gradient(225deg, #226cff 14.89%, #1084ff 85.85%);
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      padding: 12px 24px;
+      color: $title;
+
+      border: transparent;
+      &:hover {
+        cursor: pointer;
+        background: #226cff;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    button.btn-read-more-mobile {
+      display: none;
+      @include mobile {
+        margin-top: 40px;
+        display: block;
+      }
+    }
+    .content-awards-wrap {
+      width: 56%;
+      .award-detail {
+        cursor: pointer;
+        background: #1a203b;
+        border-radius: 14px;
+        overflow: hidden;
+        :last-child {
+          padding: 20px;
+        }
+        .award-date {
+          margin-top: 20px;
+          color: $paragraph;
+        }
+        .award-date,
+        .award-title {
+          padding-left: 20px;
+          padding-right: 20px;
+          white-space: nowrap;
+
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .award-title {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+    }
+    @include mobile {
+      flex-direction: column;
+      margin-top: 120px;
+      .content-awards {
+        width: 100%;
+        .title-awards {
+          font-size: 48px;
+        }
+      }
+      .content-awards-wrap {
+        display: none;
+      }
+    }
+    .content-awards-mobile-wrap {
+      display: none;
+
+      @include mobile {
+        display: block;
+        width: calc(100% + 40px);
+        padding-left: 24px;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .content-awards-mobile {
+          display: flex;
+          flex-wrap: nowrap;
+          .award-detail-mobile {
+            margin-right: 20px;
+            background: #1a203b;
+            border-radius: 14px;
+            width: 70%;
+            :last-child {
+              padding: 20px;
+            }
+            .award-date {
+              margin-top: 20px;
+              color: $paragraph;
+            }
+            .award-date,
+            .award-title {
+              padding-left: 20px;
+              padding-right: 20px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            .award-title {
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  @keyframes example {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+.desktop-ui {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-ui {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}

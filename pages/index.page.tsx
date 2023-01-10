@@ -1,8 +1,12 @@
-import { ReactElement } from 'react';
 import Layout from 'components/Layout';
+import { ReactElement } from 'react';
 import styles from 'styles/LandingPage.module.scss';
-import Link from 'next/link';
+import 'swiper/swiper.min.css';
+
 import MainImageLanding from 'components/MainImageLanding';
+import { ProductJsonLd } from 'next-seo';
+import { productJsonLd } from 'next-seo.config';
+import Link from 'next/link';
 import {
   BLOCKLENS_LOGIN_URL,
   BLOCKLENS_SINGUP_URL,
@@ -10,8 +14,6 @@ import {
   LANDING_FEEDBACKS,
   LANDING_USE_CASES,
 } from 'utils/constant';
-import { ProductJsonLd } from 'next-seo';
-import { productJsonLd } from 'next-seo.config';
 
 const Home = () => {
   const _renderGetStarted = () => (
