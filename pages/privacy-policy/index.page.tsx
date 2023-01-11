@@ -36,10 +36,9 @@ const Policy = () => {
         <p>7. INTERNATIONAL DATA TRANSFERS</p>
         <p>8. RETENTION OF PERSONAL INFORMATION</p>
         <p>9. CHILDREN&rsquo;S INFORMATION</p>
-        <p>12. OTHER PROVISIONS</p>
-        <p>13. CONTACT US</p>
+        <p>10. OTHER PROVISIONS</p>
+        <p>11. CONTACT US</p>
       </div>
-      <h2>&zwj;</h2>
       <h2>1. SCOPE AND UPDATES TO THIS PRIVACY POLICY</h2>
       <p>
         This Privacy Policy applies to personal information processed by us,
@@ -64,7 +63,6 @@ const Policy = () => {
         deemed to have accepted the updated Privacy Policy if you continue to
         use our Services after the new Privacy Policy takes effect.
       </p>
-      <p>&zwj;</p>
       <h2>2. PERSONAL INFORMATION WE COLLECT</h2>
       <p>
         The categories of personal information we collect depend on how you
@@ -76,7 +74,6 @@ const Policy = () => {
         sources such as third-party services and organizations, as described
         below.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>A. Personal Information You Provide to Us Directly</strong>
       </p>
@@ -215,12 +212,9 @@ const Policy = () => {
                 beacons in e-mails to understand whether messages have been
                 opened, acted on, or forwarded.
                 <br />
-                &zwj;
-                <br />
                 Our uses of these Technologies fall into the following general
                 categories:
                 <br />
-                &zwj;
               </p>
               <ul>
                 <li>
@@ -258,8 +252,6 @@ const Policy = () => {
                     content, including ads relevant to your interests, on our
                     Services or on third-party digital properties.
                     <br />
-                    &zwj;
-                    <br />
                     See &ldquo;Your Privacy Choices and Rights&rdquo; below to
                     understand your choices regarding these Technologies.
                   </p>
@@ -280,7 +272,7 @@ const Policy = () => {
                     Google Analytics. For more information abouthow Google uses
                     your personal information (including for its own purposes,
                     e.g., for profiling or linking it to other data),please
-                    visit
+                    visit&nbsp;
                     <a href="https://policies.google.com/technologies/partner-sites">
                       Google Analytics&rsquo; Privacy Policy
                     </a>
@@ -294,7 +286,6 @@ const Policy = () => {
           </ul>
         </li>
       </ul>
-      <p>&zwj;</p>
       <p>
         <strong>C. Personal Information Collected from Other Sources</strong>
       </p>
@@ -307,7 +298,6 @@ const Policy = () => {
         personal information about you from that third-party application that
         you have made available via your privacy settings.
       </p>
-      <h2>&zwj;</h2>
       <h2>3. HOW WE USE YOUR PERSONAL INFORMATION</h2>
       <p>
         We use your personal information for a variety of business purposes,
@@ -441,7 +431,6 @@ const Policy = () => {
         If you have any questions about our marketing practices, you may contact
         us at any time as set forth in &ldquo;Contact Us&rdquo; below.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>D. With Your Consent</strong>
       </p>
@@ -450,7 +439,6 @@ const Policy = () => {
         disclosed to you at the time you provide personal information or with
         your consent.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>E. Other Purposes</strong>
       </p>
@@ -468,7 +456,6 @@ const Policy = () => {
           </p>
         </li>
       </ul>
-      <h2>&zwj;</h2>
       <h2>4. HOW WE DISCLOSE YOUR PERSONAL INFORMATION</h2>
       <p>
         We disclose your personal information to third parties for a variety of
@@ -476,7 +463,6 @@ const Policy = () => {
         others, or in the event of a major business transaction such as a
         merger, sale, or asset transfer, as described below.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>A. Disclosures to Provide our Services</strong>
       </p>
@@ -552,7 +538,7 @@ const Policy = () => {
         </li>
       </ul>
       <p>
-        <strong>&zwj;B. Disclosures to Protect Us or Others</strong>
+        <strong>B. Disclosures to Protect Us or Others</strong>
       </p>
       <p>
         We may access, preserve, and disclose any information associated with
@@ -563,7 +549,6 @@ const Policy = () => {
         contracts; collect amounts owedtous; or assist withan investigation or
         prosecution of suspected or actual illegal activity.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>
           C. Disclosure in the Event of Merger, Sale, or Other Asset Transfers
@@ -576,7 +561,6 @@ const Policy = () => {
         or transferred as part of such a transaction, as permitted by law and/or
         contract.
       </p>
-      <h2>&zwj;</h2>
       <h2>5. YOUR PRIVACY CHOICES AND RIGHTS</h2>
       <p>
         <strong>Your Privacy Choices.</strong>The privacy choices you may have
@@ -644,7 +628,6 @@ const Policy = () => {
         Please note you must separately opt out in each browser and on each
         device.
       </p>
-      <p>&zwj;</p>
       <p>
         <strong>Your Privacy Rights.</strong>&nbsp;In accordance with applicable
         law, you may have the right to:
@@ -688,13 +671,11 @@ const Policy = () => {
           </p>
         </li>
       </ul>
-      <p>&zwj;</p>
       <p>
         If you would like to exercise any of these rights, please contact us as
         set forth in&ldquo;Contact Us&rdquo; below. We will process such
         requests in accordance with applicable laws.
       </p>
-      <h2>&zwj;</h2>
       <h2>6. SECURITY OF YOUR INFORMATION</h2>
       <p>
         We take steps to ensure that your information is treated securely and in
@@ -712,19 +693,15 @@ const Policy = () => {
         notify you electronically by posting a notice on our Services, by mail,
         or by sending an email to you.
       </p>
-      <h2>&zwj;</h2>
       <h2>7. INTERNATIONAL DATA TRANSFERS</h2>
-      <p>&zwj;</p>
       <p>
         All information processed by us may be transferred, processed, and
         stored anywhere in the world, including but not limited to the United
         States or other countries that may have data protection laws that are
         different from the laws where you live. We endeavor to safeguard your
         information consistent with the requirements of the applicable laws.
-        &zwj;
       </p>
       <h2>8. RETENTION OF PERSONAL INFORMATION</h2>
-      <p>&zwj;</p>
       <p>
         We store the personal information we collect as described in this
         Privacy Policy for as long as you use our Services, or as necessary to
@@ -733,8 +710,7 @@ const Policy = () => {
         pursue legitimate business purposes, enforce our agreements, and comply
         with applicable laws.
       </p>
-      <h2>&zwj;9. CHILDREN&rsquo;S INFORMATION</h2>
-      <p>&zwj;</p>
+      <h2>9. CHILDREN&rsquo;S INFORMATION</h2>
       <p>
         The Services are not directed to children under 16 (or other age as
         required by local law), and we do not knowingly collect personal
@@ -746,9 +722,7 @@ const Policy = () => {
         information we have collected, unless we have a legal obligation to keep
         it, and terminate the child&rsquo;s account, if applicable.
       </p>
-      <h2>&zwj;</h2>
       <h2>10. OTHER PROVISIONS</h2>
-      <p>&zwj;</p>
       <p>
         <strong>Third-Party Websites/Applications.</strong> The Services may
         contain links to other websites/applications and other
@@ -760,7 +734,6 @@ const Policy = () => {
         or applications. Providing personal information to third-party websites
         or applications is at your own risk.
       </p>
-      <h2>&zwj;</h2>
       <h2>11. CONTACT US</h2>
       <p>
         Blocklens is the controller of the personal information we process under
