@@ -16,8 +16,8 @@ import {
   PRICING_PLANS,
 } from 'utils/constant';
 import Link from 'next/link';
-import { ProductJsonLd } from 'next-seo';
-import { productJsonLd } from 'next-seo.config';
+import { NextSeoProps, ProductJsonLd } from 'next-seo';
+import { productJsonLd, seoConfigs } from 'next-seo.config';
 
 const Pricing = () => {
   const _renderPrice = () => (
@@ -294,9 +294,12 @@ const Pricing = () => {
 export default Pricing;
 
 Pricing.getLayout = function getLayout(page: ReactElement) {
+  const seoProps: NextSeoProps = {
+    title: `${seoConfigs.title} - Pricing`,
+  };
   return (
     <>
-      <Layout className="pricing-container">
+      <Layout {...seoProps} className="pricing-container">
         <ProductJsonLd {...productJsonLd} />
         {page}
       </Layout>

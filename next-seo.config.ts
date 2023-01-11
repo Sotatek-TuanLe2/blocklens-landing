@@ -131,6 +131,11 @@ export const seoConfigs: ISeoConfigs = {
   ],
   linkTags: [
     {
+      rel: 'shortcut icon',
+      href: '/favicon.ico',
+      type: 'image/x-icon'
+    },
+    {
       rel: 'apple-touch-icon',
       sizes: '60x60',
       href: '/apple-touch-icon.png'
