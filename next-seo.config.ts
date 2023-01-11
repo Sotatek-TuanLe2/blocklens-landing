@@ -192,7 +192,7 @@ export const productJsonLd: ProductJsonLdProps = {
   manufacturerName: seoConfigs.organization.legalName,
   slogan: 'Listen to on-chain activities',
   disambiguatingDescription: 'Blockchain made simple. Remove the hassle of syncing and maintaining data/transactions between on-chain and off-chain. No fullnode setup, No code, Multichain.',
-  releaseDate: '2022',
+  releaseDate: '2023',
   reviews: [
     {
       author: 'Leo - CEO Fizen',

@@ -27,7 +27,7 @@ const Home = () => {
         configurable, real-time. Get started for free now!
       </div>
       <div className={styles['introduction__btn']}>
-        <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+        <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
           <button className={styles['btn-primary']}>Get Started</button>
         </Link>
       </div>
@@ -60,9 +60,9 @@ const Home = () => {
 
   const _renderUseCases = () => (
     <div className={styles['use-cases']}>
-      <h1 className={styles['use-cases__title']}>
+      <div className={styles['use-cases__title']}>
         Use <span>cases</span>
-      </h1>
+      </div>
       <div>
         {LANDING_USE_CASES.map((item, index: number) => {
           return (
@@ -100,10 +100,10 @@ const Home = () => {
 
   const _renderFeedback = () => (
     <div className={styles['feedback']}>
-      <h1 className={styles['feedback__heading']}>
+      <div className={styles['feedback__heading']}>
         What other <br />
         <span>developers</span> say
-      </h1>
+      </div>
 
       <div className={styles['feedback__content']}>
         <div className={styles['feedback__list']}>
@@ -127,16 +127,16 @@ const Home = () => {
 
   const _renderCTA = () => (
     <div className={styles['get-start']}>
-      <h1 className={styles['get-start__heading']}>
+      <div className={styles['get-start__heading']}>
         Get <span> started </span> now
-      </h1>
+      </div>
       <div className={styles['get-start__description']}>
         Block Lens gives you, the developers, the UX you demand and deserve,
         with no custom code.
       </div>
 
       <div className={styles['get-start__btn']}>
-        <Link href={BLOCKLENS_SINGUP_URL} target="_blank">
+        <Link href={BLOCKLENS_SINGUP_URL} target="_blank" rel="noreferrer">
           <button className={styles['btn-primary']}>Sign Up</button>
         </Link>
       </div>
