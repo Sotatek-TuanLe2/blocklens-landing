@@ -26,7 +26,7 @@ const Terms = () => {
         </strong>
       </p>
       <p>
-        <strong>1 Services &ndash; Right to use</strong>
+        <strong>1. Services &ndash; Right to use</strong>
       </p>
       <p>
         <br />
@@ -104,7 +104,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>2 Client Obligations</strong>
+        <strong>2. Client Obligations</strong>
       </p>
       <p>
         <br />
@@ -194,7 +194,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>3 Fees and Payment Terms</strong>
+        <strong>3. Fees and Payment Terms</strong>
       </p>
       <p>
         <br />
@@ -245,7 +245,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>4 Ownership</strong>
+        <strong>4. Ownership</strong>
       </p>
       <p>
         <br />
@@ -283,7 +283,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>5 Client Support</strong>
+        <strong>5. Client Support</strong>
       </p>
       <p>
         <br />
@@ -308,7 +308,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>6 Personal Data, Privacy, Disclosure</strong>
+        <strong>6. Personal Data, Privacy, Disclosure</strong>
       </p>
       <p>
         <br />
@@ -357,7 +357,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>7 Passwords</strong>
+        <strong>7. Passwords</strong>
       </p>
       <p>
         <br />
@@ -375,7 +375,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>8 Limited Warranty</strong>
+        <strong>8. Limited Warranty</strong>
       </p>
       <p>
         <br />
@@ -403,7 +403,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>9 Limitation of Liability</strong>
+        <strong>9. Limitation of Liability</strong>
       </p>
       <p>
         <br />
@@ -509,7 +509,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>10 Force Majeure</strong>
+        <strong>10. Force Majeure</strong>
       </p>
       <p>
         <br />
@@ -552,7 +552,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>11 Confidentiality.</strong>
+        <strong>11. Confidentiality.</strong>
       </p>
       <p>
         <br />
@@ -577,7 +577,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>12 Term of Agreement and Termination</strong>
+        <strong>12. Term of Agreement and Termination</strong>
       </p>
       <p>
         <br />
@@ -657,7 +657,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>13 Access Restrictions and Early Termination</strong>
+        <strong>13. Access Restrictions and Early Termination</strong>
       </p>
       <p>
         <br />
@@ -679,7 +679,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>14 Assignment</strong>
+        <strong>14. Assignment</strong>
       </p>
       <p>
         <br />
@@ -695,7 +695,7 @@ const Terms = () => {
         <br />
       </p>
       <p>
-        <strong>15 General Provisions</strong>
+        <strong>15. General Provisions</strong>
       </p>
       <p>
         <br />
