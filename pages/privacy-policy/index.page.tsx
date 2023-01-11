@@ -1,6 +1,8 @@
 import { ReactElement } from 'react';
 import Layout from 'components/Layout';
 import styles from 'styles/Term&PolicyPage.module.scss';
+import { seoConfigs } from 'next-seo.config';
+import { NextSeoProps } from 'next-seo';
 
 const Policy = () => {
   return (
@@ -758,9 +760,14 @@ const Policy = () => {
 export default Policy;
 
 Policy.getLayout = function getLayout(page: ReactElement) {
+  const seoProps: NextSeoProps = {
+    title: `${seoConfigs.title} - Privacy Policy`,
+  };
   return (
     <>
-      <Layout className="term-and-policy">{page}</Layout>
+      <Layout {...seoProps} className="term-and-policy">
+        {page}
+      </Layout>
     </>
   );
 };
