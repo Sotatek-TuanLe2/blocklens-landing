@@ -13,10 +13,6 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
 
   const menus = [
     {
-      name: 'Developer',
-      path: '/',
-    },
-    {
       name: 'Documentation',
       path: '',
     },
@@ -62,7 +58,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
               );
             })}
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+              <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -92,7 +88,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
           })}
 
           <div>
-            <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+            <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>
