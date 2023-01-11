@@ -218,7 +218,7 @@ const AboutUs = () => {
           </div>
           <div>
             {' '}
-            <Link href={'/'} target="_blank">
+            <Link href={'https://www.sotatek.com/'} target="_blank">
               <button className={styles['btn-read-more']}>Read more</button>
             </Link>
           </div>
@@ -264,7 +264,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-        <Link href={'/'} target="_blank">
+        <Link href={'https://www.sotatek.com/'} target="_blank">
           <button className={styles['btn-read-more-mobile']}>Read more</button>
         </Link>
       </div>

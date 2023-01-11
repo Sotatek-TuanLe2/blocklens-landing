@@ -4,8 +4,6 @@ import styles from 'styles/LandingPage.module.scss';
 import 'swiper/swiper.min.css';
 
 import MainImageLanding from 'components/MainImageLanding';
-import { ProductJsonLd } from 'next-seo';
-import { productJsonLd } from 'next-seo.config';
 import Link from 'next/link';
 import {
   BLOCKLENS_LOGIN_URL,
@@ -14,6 +12,8 @@ import {
   LANDING_FEEDBACKS,
   LANDING_USE_CASES,
 } from 'utils/constant';
+import { NextSeoProps, ProductJsonLd } from 'next-seo';
+import { productJsonLd, seoConfigs } from 'next-seo.config';
 
 const Home = () => {
   const _renderGetStarted = () => (
@@ -164,9 +164,12 @@ const Home = () => {
 export default Home;
 
 Home.getLayout = function getLayout(page: ReactElement) {
+  const seoProps: NextSeoProps = {
+    title: `${seoConfigs.title} - Notifications for Web3.0 Developers`,
+  };
   return (
     <>
-      <Layout>
+      <Layout {...seoProps}>
         <ProductJsonLd {...productJsonLd} />
         {page}
       </Layout>
