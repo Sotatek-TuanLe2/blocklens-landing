@@ -13,10 +13,6 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
 
   const menus = [
     {
-      name: 'Developer',
-      path: '/',
-    },
-    {
       name: 'Documentation',
       path: '',
     },
