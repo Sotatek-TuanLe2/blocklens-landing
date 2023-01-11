@@ -25,12 +25,7 @@ const Terms = () => {
           through such execution.
         </strong>
       </p>
-      <p>
-        <strong>1. Services &ndash; Right to use</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>1. Services &ndash; Right to use</h2>
       <p>
         <strong>1.1</strong> Subject to the terms and conditions of this
         Agreement, Blocklens hereby grants to the Client a non-transferable,
@@ -47,17 +42,11 @@ const Terms = () => {
         otherwise.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>1.2</strong> Blocklens reserves the right to implement new
         versions and upgrades of the Services including, but not limited to,
         changes that effect modifications to the design, operational method,
         technical specifications, systems, and other functions, etc. of the
         Services, at any time without prior notice.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>1.3</strong> Blocklens undertakes, in its sole discretion, to
@@ -74,9 +63,6 @@ const Terms = () => {
         equipment which is used to obtain access to the Services.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>1.4</strong> Blocklens has the right to amend these General
         Terms and Conditions. The Client shall be informed of any such
         amendments through a notification via e-mail or via Blocklens&rsquo; web
@@ -91,32 +77,18 @@ const Terms = () => {
         new General Terms and Conditions.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>1.5</strong> Blocklens shall be entitled to retain
         subcontractors, including third party software suppliers, for the
         performance of obligations in accordance with this Agreement. Blocklens
         shall be liable for the subcontractors&rsquo; work and services in the
         same manner as for its own work and services.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>2. Client Obligations</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>2. Client Obligations</h2>
       <p>
         <strong>2.1</strong> The Client shall always comply with any security
         and administrative regulations as notified in conjunction with
         registration, by e-mail, as made available on Blocklens&rsquo; web site,
         or in any other manner.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>2.2</strong> The Client shall ensure that all details provided
@@ -126,18 +98,12 @@ const Terms = () => {
         to such information occurs.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>2.3</strong> The Client shall be responsible for the activities
         conducted by the Client and shall use the Services in compliance with
         national laws in conjunction therewith. All applications and other
         results and the use of such applications and result created by the
         Client using the Services shall be the sole responsibility of the
         Client.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>2.4</strong> The Client shall be responsible for monitoring
@@ -157,18 +123,12 @@ const Terms = () => {
         third party services.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>2.5</strong> The Client undertakes not to use the Services in
         any manner which may result in the infringement of any third
         party&rsquo;s copyright, or which constitutes a dissemination of
         business secret, or may incite a third party to commit or participate in
         a crime, or may be understood as constituting a threat, or to use the
         Services in any other manner incompatible with the purpose intended.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>2.6</strong> The Client shall remain liable for all of its users
@@ -181,45 +141,22 @@ const Terms = () => {
         or any third party developers.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
-        <br />
-      </p>
-      <p>
         <strong>2.7</strong> The Client is obligated to notify Blocklens
         regarding any suspected breach of these article 2 provisions.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>3. Fees and Payment Terms</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>3. Fees and Payment Terms</h2>
       <p>
         <strong>3.1</strong> The Client shall pay compensation for the Services
         in accordance with the fees set out upon sign up procedure or otherwise
         agreed.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>3.2</strong> All Services provided by Blocklens shall be debited
         to the Client in advance.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>3.3</strong> When starting to use the Services, you agree that
         you lose your right to a refund and waive any cooling off period.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>3.4</strong> Payment shall be made by the Client against through
@@ -227,29 +164,15 @@ const Terms = () => {
         provider.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>3.5</strong> In the event of early termination of the Services
         or the Agreement, due to the Client&rsquo;s breach the Client shall not
         be entitled to a refund of any prepaid fees.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>3.6</strong> All prices and fees are excluding VAT and exclude
         other additional applicable taxes and charges.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>4. Ownership</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>4. Ownership</h2>
       <p>
         <strong>4.1</strong> Blocklens shall hold title to any and all
         intellectual property rights and technical solutions to the Services or,
@@ -263,9 +186,6 @@ const Terms = () => {
         licensed, not sold.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>4.2</strong> All content and data uploaded to, transferred
         through, posted, processed or entered into the Services by the Client
         and/or its users shall remain the sole property of the Client or its
@@ -273,21 +193,10 @@ const Terms = () => {
         content and data.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>4.3</strong> The Client may not in any way modify, decompile,
         disassemble or reverse engineer the Services except as permitted by law.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>5. Client Support</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>5. Client Support</h2>
       <p>
         <strong>5.1</strong> Blocklens provides the Client with support by
         e-mail (admin@blocklens.io) regarding Client&rsquo;s enquiries in
@@ -297,22 +206,11 @@ const Terms = () => {
         in detail by Blocklens.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>5.2</strong> Enquiries and/or error notices must be submitted to
         Blocklens by e-mail in accordance with the contact information available
         on Blocklens&rsquo; website.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>6. Personal Data, Privacy, Disclosure</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>6. Personal Data, Privacy, Disclosure</h2>
       <p>
         <strong>6.1</strong> In order for the Client to be able to use the
         Services, the Client must provide certain data to Blocklens regarding
@@ -325,9 +223,6 @@ const Terms = () => {
         Blocklens information gathering and dissemination practices are set
         forth in the Blocklens&rsquo; Privacy Policy applicable from time to
         time, which is available on Blocklens&rsquo; website.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>6.2</strong> In addition, in order for the Client to be able to
@@ -343,9 +238,6 @@ const Terms = () => {
         application and the Client&rsquo;s users use of the same application.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>6.3</strong> Client shall, when considered to be the data
         controller, in its use of the Services, process personal data in
         accordance with the requirements of applicable data protection laws and
@@ -353,15 +245,7 @@ const Terms = () => {
         the accuracy, quality, and legality of personal data and the means by
         which Client acquired personal data.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>7. Passwords</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>7. Passwords</h2>
       <p>
         <strong>7.1</strong> The Client shall ensure that usernames, passwords,
         and equivalent obtained by the Client in conjunction with registration
@@ -371,23 +255,12 @@ const Terms = () => {
         any loss or damage arising from the Client&rsquo;s failure to comply
         with these requirements.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>8. Limited Warranty</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>8. Limited Warranty</h2>
       <p>
         <strong>8.1</strong> Blocklens warrants to the Client that the Services
         will perform substantially and materially in accordance with how it is
         presented on its web site, under normal use and circumstances, and for
         the purpose intended.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>8.2</strong> Except for the express warranties set forth above
@@ -399,21 +272,10 @@ const Terms = () => {
         uninterrupted, completely secure, free of software errors, or that
         defects and deficiencies in the Services will be corrected.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>9. Limitation of Liability</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>9. Limitation of Liability</h2>
       <p>
         <strong>9.1</strong> Subject to the limitations set forth in this
         Agreement, Blocklens shall only be liable for direct damages.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>9.2</strong> In the event of major defects that seriously impede
@@ -426,16 +288,10 @@ const Terms = () => {
         within a reasonable time of the discovery of the defect.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>9.3</strong> The Client shall not be entitled to a reduction in
         payment, or to damages or other sanctions in the event of operational
         disruption or errors that impede data traffic that are not due to
         negligence by Blocklens.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>9.4</strong> Blocklens shall defend and indemnify Client from
@@ -457,9 +313,6 @@ const Terms = () => {
         designed where the Services would not otherwise itself be infringing.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>9.5</strong> In the event that the Services in such suit or
         proceeding are held to constitute an infringement, or if in Blocklens
         reasonable opinion the Services may constitute such infringement, and/or
@@ -467,27 +320,15 @@ const Terms = () => {
         its option, either
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         (i) procure for Client the right to continue the use of the Services, or
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         (ii) replace the Services with non-infringing services of materially
         equivalent function and performance, or
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         (iii) modify the Services so that it becomes non-infringing without
         materially detracting from function or performance.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         Should none of these measures be technically, commercially or
@@ -496,24 +337,13 @@ const Terms = () => {
         of fees paid in advance in respect of not yet used Services.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>9.6</strong> Blocklens liability under this Agreement, including
         the DPA, shall, under all circumstances be limited to direct losses in
         an amount corresponding to the agreed fees paid by the Client for the
         Services during the period of six (6) months immediately prior to the
         breach of contract that entitles the Client to damages.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>10. Force Majeure</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>10. Force Majeure</h2>
       <p>
         <strong>10.1</strong> A party is exempt from sanctions for failure to
         fulfill certain obligations under the Agreement if the failure is due to
@@ -525,21 +355,9 @@ const Terms = () => {
         subcontractors.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>10.2</strong> It is incumbent upon the party who wishes to cite
         grounds for exemption under this section to inform the other Party
         without delay that such a circumstance has arisen, and when it ceases.
-      </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>10.3</strong> Irrespective of the provisions on exemption from
@@ -548,15 +366,7 @@ const Terms = () => {
         party if the fulfillment of a significant obligation under this
         Agreement is delayed by more than three (3) months.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>11. Confidentiality.</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>11. Confidentiality.</h2>
       <p>
         <strong>11.1</strong> Blocklens undertakes not to disclose to any third
         party, or otherwise make available, information received by Blocklens
@@ -573,15 +383,7 @@ const Terms = () => {
         pursuant to legal provisions, public authority regulations or court
         orders
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>12. Term of Agreement and Termination</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>12. Term of Agreement and Termination</h2>
       <p>
         <strong>12.1</strong> The Agreement comes into force on the earliest of
         (i) when the Client logs-on to the Services for the first time, (ii)
@@ -590,23 +392,14 @@ const Terms = () => {
         12.2.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>12.2</strong> Each Party has the right to give written notice of
         termination of the Agreement. Such notice of termination must be given
         no later than ninety (90) days before the party wants the Agreement to
         expiry.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>12.3</strong> Either party has the right to terminate the
         Agreement with immediate effect if:
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         (i) the other party is guilty of material breach of the Agreement and
@@ -615,15 +408,9 @@ const Terms = () => {
         from the other party with a request that corrective action is taken;
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         (ii) the other party suspends payments, resolves on voluntary or
         involuntary liquidation, applies for a company reorganization or
         bankruptcy or if the party can otherwise be regarded as insolvent.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>12.4</strong> EU customers accept that if they use the service
@@ -632,14 +419,8 @@ const Terms = () => {
         cool-off period for digital services
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>12.5</strong> On the termination of the Agreement, all parts of
         the Client&rsquo;s right to utilize the Services terminates.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>12.6</strong> Upon termination of this Agreement for any reason,
@@ -647,21 +428,10 @@ const Terms = () => {
         Client&rsquo;s data and content related thereto.
       </p>
       <p>
-        <br />
-      </p>
-      <p>
         <strong>12.7</strong> Sections 9 and 15 shall survive any termination of
         this Agreement.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>13. Access Restrictions and Early Termination</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>13. Access Restrictions and Early Termination</h2>
       <p>
         <strong>13.1</strong> Blocklens shall be entitled, with immediate
         effect, to disable the Client&rsquo;s access to the Services or to
@@ -675,15 +445,7 @@ const Terms = () => {
         Client otherwise fails to comply with the Agreementand such breach of
         contract is material.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>14. Assignment</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>14. Assignment</h2>
       <p>
         <strong>14.1</strong> Blocklens shall be entitled, in whole or in part,
         to assign its rights and obligations under the Agreement to a company
@@ -691,15 +453,7 @@ const Terms = () => {
         to a purchaser of all or substantially all of its stock or assets
         without the Client&rsquo;s prior consent.
       </p>
-      <p>
-        <br />
-      </p>
-      <p>
-        <strong>15. General Provisions</strong>
-      </p>
-      <p>
-        <br />
-      </p>
+      <h2>15. General Provisions</h2>
       <p>
         <strong>15.1</strong> If any provision of this Agreement is declared
         unenforceable for any reason, the remainder of this Agreement will
@@ -707,9 +461,6 @@ const Terms = () => {
         be amended to the extent possible and permitted by law to achieve as
         nearly as possible the same intent and economic effect as the original
         provision.
-      </p>
-      <p>
-        <br />
       </p>
       <p>
         <strong>15.2</strong> This Agreement and the ensuing relationship
