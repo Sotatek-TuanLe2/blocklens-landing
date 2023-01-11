@@ -70,11 +70,11 @@ const Pricing = () => {
 
   const _renderBanner = () => (
     <>
-      <h1
+      <div
         className={`${styles['introduction__main-text']} ${styles['price-text']}`}
       >
         Support the best <span>networks</span>
-      </h1>
+      </div>
       <div className={styles['network-support']}>
         <img src="/images/network-circle.png" alt="network circle" />
       </div>
@@ -128,7 +128,11 @@ const Pricing = () => {
                   </div>
                   <div className={styles['active-plan-btn']}>
                     <div>
-                      <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
+                      <Link
+                        href={BLOCKLENS_LOGIN_URL}
+                        target={'_blank'}
+                        rel="noreferrer"
+                      >
                         Get Started
                       </Link>
                     </div>
@@ -209,7 +213,11 @@ const Pricing = () => {
             className={`${styles['free-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
+              <Link
+                href={BLOCKLENS_LOGIN_URL}
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Get Started
               </Link>
             </div>
@@ -219,7 +227,11 @@ const Pricing = () => {
             className={`${styles['starter-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
+              <Link
+                href={BLOCKLENS_LOGIN_URL}
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Get Started
               </Link>
             </div>{' '}
@@ -229,7 +241,11 @@ const Pricing = () => {
             className={`${styles['growth-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
+              <Link
+                href={BLOCKLENS_LOGIN_URL}
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Get Started
               </Link>
             </div>
@@ -240,7 +256,11 @@ const Pricing = () => {
             className={`${styles['pro-plan-cell']} ${styles['active-plan']}`}
           >
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target={'_blank'}>
+              <Link
+                href={BLOCKLENS_LOGIN_URL}
+                target={'_blank'}
+                rel="noreferrer"
+              >
                 Get Started
               </Link>
             </div>
@@ -253,11 +273,11 @@ const Pricing = () => {
 
   const _renderPlan = () => (
     <>
-      <h1
+      <div
         className={`${styles['introduction__main-text']} ${styles['price-text']}`}
       >
         <span>Plan</span> comparison
-      </h1>
+      </div>
       {_renderPlanComparisonMobile()}
       {_renderPlanConparisonDesktop()}
     </>
@@ -265,11 +285,11 @@ const Pricing = () => {
 
   const _renderCTA = () => (
     <>
-      <h1
+      <div
         className={`${styles['introduction__main-text']} ${styles['price-text']}`}
       >
         Want to learn more? <span>Contact us</span>
-      </h1>
+      </div>
       <div className={styles['button-network-wrap']}>
         <div className={styles['button-network']}>
           <div className={'icon-telegram'}></div>
