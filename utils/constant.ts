@@ -42,7 +42,7 @@ export const LANDING_USE_CASES: {
   {
     name: '1. Address transactions',
     description:
-      'Notify whenever there is a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
+      'Notify whenever a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
     image: 'address-transaction',
   },
   {
@@ -54,7 +54,7 @@ export const LANDING_USE_CASES: {
   {
     name: '3. NFT activities',
     description:
-      'Notify your users when their NFT is minted, transferred to another users. Congrats your users once their in-game NFT is sold, their items is available for sale and much more.',
+      'Notify your users when their NFT is minted, transferred to other users. Congrats your users once their in-game NFT is sold, their items are available for sale and much more.',
     image: 'nft-activity',
   },
   {
