@@ -201,7 +201,10 @@ export const PRICING_PLANS: {
   },
 ];
 
-export const MILESTONES = [
+export const MILESTONES: {
+  content: string;
+  year: string;
+}[] = [
   { content: 'Company establishment in Hanoi, Vietnam.', year: '2015' },
   {
     content: 'Successfully laid the foundation of global expansion.',
@@ -234,7 +237,12 @@ export const MILESTONES = [
   },
 ];
 
-export const AWARDS = [
+export const AWARDS: {
+  image: string;
+  date: string;
+  title: string;
+  linkPage: string;
+}[] = [
   {
     image: '/images/award1.png',
     date: 'December 22, 2022',

@@ -28,6 +28,8 @@ import { Controller, Navigation } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { AWARDS, MILESTONES } from 'utils/constant';
 import { useRouter } from 'next/router';
+import { NextSeoProps } from 'next-seo';
+import { seoConfigs } from 'next-seo.config';
 
 const AboutUs = () => {
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
@@ -292,9 +294,14 @@ const AboutUs = () => {
 export default AboutUs;
 
 AboutUs.getLayout = function getLayout(page: ReactElement) {
+  const seoProps: NextSeoProps = {
+    title: `${seoConfigs.title} - About us`,
+  };
   return (
     <>
-      <Layout className="about-us-container">{page}</Layout>
+      <Layout className="about-us-container" {...seoProps}>
+        {page}
+      </Layout>
     </>
   );
 };
