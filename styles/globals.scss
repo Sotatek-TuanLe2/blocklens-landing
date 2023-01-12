@@ -90,17 +90,17 @@ img {
 }
 
 .page-container {
-  background-image: url('/images/bg-homepage.jpg');
+  background-image: url('/images/bg-homepage.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   font-family: 'Anderson Grotesk Light', sans-serif;
   @include tablet {
-    background-image: url('/images/bg-homepage-mobile.png');
+    background-image: url('/images/bg-homepage-mobile.webp');
   }
 
   @include tablet {
-    background-image: url('/images/bg-homepage-mobile.jpg');
+    background-image: url('/images/bg-homepage-mobile.webp');
   }
 
   .content-container {
