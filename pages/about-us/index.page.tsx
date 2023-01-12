@@ -1,5 +1,4 @@
 import {
-  Box,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -8,16 +7,16 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { BlocklensIcon } from 'components/Icons/BlocklensIcon';
-import { NextBtnIcon } from 'components/Icons/NextBtn';
 import { PlayVideoIcon } from 'components/Icons/PlayVideo';
-import { PreBtnIcon } from 'components/Icons/PreBtn';
 import { SotaHolding } from 'components/Icons/SotaHolding';
 import { TimelineIcon } from 'components/Icons/TimelineIcon';
 import Layout from 'components/Layout';
-import dynamic from 'next/dynamic';
+import { NextSeoProps, OrganizationJsonLd } from 'next-seo';
+import { organizationJsonLd, seoConfigs } from 'next-seo.config';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Router } from 'next/router';
-import { ReactElement, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import { ReactElement, useState } from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -25,16 +24,25 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import styles from 'styles/AboutUs.module.scss';
 import { Controller, Navigation } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { AWARDS, MILESTONES } from 'utils/constant';
-import { useRouter } from 'next/router';
-import { NextSeoProps } from 'next-seo';
-import { seoConfigs } from 'next-seo.config';
+import { introSotalabs, aboutSotatek, award1, award2 } from 'public/images';
 
 const AboutUs = () => {
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
+
+  const getLinkImageAwards = (linkImage: string) => {
+    switch (linkImage) {
+      case '/images/award1.png':
+        return award1;
+      case '/images/award2.png':
+        return award2;
+      default:
+        return award1;
+    }
+  };
 
   return (
     <div className={styles['about-us-wrap']}>
@@ -58,7 +66,7 @@ const AboutUs = () => {
         </div>
         <div className={styles['image-intro-wrap']}>
           <div className={styles['image-intro']}>
-            <img src="/images/intro-sotalabs.png" />
+            <Image placeholder="blur" src={introSotalabs} alt="sotalabs" />
           </div>
           <div className={styles['image-logo']}>
             <BlocklensIcon />
@@ -118,7 +126,7 @@ const AboutUs = () => {
         </div>
         <div className={styles['desc-about-sotatek']}>
           <div className={styles['img-desc']} onClick={onOpen}>
-            <img src="/images/about-sotatek.png" alt="about-sotatek" />
+            <Image placeholder="blur" src={aboutSotatek} alt="about-sotatek" />
             <div className={styles['btn-play-video']}>
               <PlayVideoIcon />
             </div>
@@ -208,7 +216,11 @@ const AboutUs = () => {
                 {AWARDS.map((award, index) => (
                   <SwiperSlide key={`${index} award`}>
                     <div className={styles['award-sota']}>
-                      <img src={award.image} alt={`award ${index}`} />
+                      <Image
+                        placeholder="blur"
+                        src={getLinkImageAwards(award.image)}
+                        alt={`award ${index}`}
+                      />
 
                       <div>{award.date}</div>
                       <div>{award.title}</div>
@@ -241,7 +253,11 @@ const AboutUs = () => {
                   className={styles['award-detail']}
                   onClick={() => window.open(award.linkPage, '_blank')}
                 >
-                  <img src={award.image} alt={`award ${index}`} />
+                  <Image
+                    placeholder="blur"
+                    src={getLinkImageAwards(award.image)}
+                    alt={`award ${index}`}
+                  />
 
                   <div className={styles['award-date']}>{award.date}</div>
                   <div className={styles['award-title']}>{award.title}</div>
@@ -258,7 +274,11 @@ const AboutUs = () => {
                 key={`${index} award`}
                 onClick={() => window.open(award.linkPage, '_blank')}
               >
-                <img src={award.image} alt={`award ${index}`} />
+                <Image
+                  placeholder="blur"
+                  src={getLinkImageAwards(award.image)}
+                  alt={`award ${index}`}
+                />
 
                 <div className={styles['award-date']}>{award.date}</div>
                 <div className={styles['award-title']}>{award.title}</div>
@@ -300,6 +320,7 @@ AboutUs.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Layout className="about-us-container" {...seoProps}>
+        <OrganizationJsonLd {...organizationJsonLd} />
         {page}
       </Layout>
     </>

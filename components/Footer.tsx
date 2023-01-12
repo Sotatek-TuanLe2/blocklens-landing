@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from 'styles/components/Footer.module.scss';
+import { logoImg } from 'public/images';
 
 const menus = [
   {
@@ -36,13 +38,12 @@ const Footer = () => {
   return (
     <div className={styles['footer-landing']}>
       <div className={styles['box-info']}>
-        <img src="/images/logo.png" alt="logo" />
-
+        <Image src={logoImg} alt="Blocklens logo" />
         <div className={styles['description']}>
           Block Lens pushes on-chain events to your back-end web hooks.
           Reliable, configurable, real-time. Get started for free now!
         </div>
-        <div className={styles['name']}>© 2022, Block Lens</div>
+        <div className={styles['name']}>© 2023, Block Lens</div>
       </div>
 
       <div className={styles['menus-link']}>

@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FC, useState } from 'react';
 import { CloseMenuIcon, IconMenuMobile } from 'components/Icons';
 import styles from 'styles/components/Header.module.scss';
 import { BLOCKLENS_LOGIN_URL } from 'utils/constant';
+import { logoImg } from 'public/images';
 
 interface IHeader {
   isFixedHeader: boolean;
@@ -12,10 +14,6 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
   const [isShowHeader, setIsShowHeader] = useState<boolean>(false);
 
   const menus = [
-    {
-      name: 'Developer',
-      path: '/',
-    },
     {
       name: 'Documentation',
       path: '',
@@ -45,7 +43,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
       <div className={styles['content']}>
         <div>
           <Link href={'/'}>
-            <img src="/images/logo.png?v=0.0.1" alt="logo" />
+            <Image src={logoImg} alt="Blocklens logo" />
           </Link>
         </div>
         <div className={`${styles['desktop-ui']}`}>
@@ -62,7 +60,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
               );
             })}
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+              <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -92,7 +90,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
           })}
 
           <div>
-            <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+            <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>

@@ -1,5 +1,6 @@
-import Layout from 'components/Layout';
 import { ReactElement } from 'react';
+import Image from 'next/image';
+import Layout from 'components/Layout';
 import styles from 'styles/LandingPage.module.scss';
 import 'swiper/swiper.min.css';
 
@@ -14,6 +15,16 @@ import {
 } from 'utils/constant';
 import { NextSeoProps, ProductJsonLd } from 'next-seo';
 import { productJsonLd, seoConfigs } from 'next-seo.config';
+import {
+  advancedEventImg,
+  multichainImg,
+  pushNotificationImg,
+  simpleIntegrationImg,
+  addressTransactionImg,
+  SCTransactionImg,
+  NFTActivitiesImg,
+  FailedTransactionImg,
+} from 'public/images';
 
 const Home = () => {
   const _renderGetStarted = () => (
@@ -29,7 +40,7 @@ const Home = () => {
         configurable, real-time. Get started for free now!
       </div>
       <div className={styles['introduction__btn']}>
-        <Link href={BLOCKLENS_LOGIN_URL} target="_blank">
+        <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
           <button className={styles['btn-primary']}>Get Started</button>
         </Link>
       </div>
@@ -38,6 +49,19 @@ const Home = () => {
       </div>
     </>
   );
+
+  const getFeatureImageSrc = (image: string) => {
+    switch (image) {
+      case 'push-notifications':
+        return pushNotificationImg;
+      case 'advanced-events':
+        return advancedEventImg;
+      case 'simple-integration':
+        return simpleIntegrationImg;
+      default:
+        return '';
+    }
+  };
 
   const _renderFeatures = () => (
     <div className={styles['categories']}>
@@ -51,7 +75,7 @@ const Home = () => {
                   {item.description}
                 </div>
               </div>
-              <img src={`/images/${item.image}`} alt={`category-${index}`} />
+              <Image src={getFeatureImageSrc(item.image)} alt={item.image} />
             </div>
             <div className={styles['divider']}></div>
           </div>
@@ -60,11 +84,26 @@ const Home = () => {
     </div>
   );
 
+  const getUsecaseImageSrc = (image: string) => {
+    switch (image) {
+      case 'address-transaction':
+        return addressTransactionImg;
+      case 'smart-contract-transaction':
+        return SCTransactionImg;
+      case 'nft-activity':
+        return NFTActivitiesImg;
+      case 'failed-transaction':
+        return FailedTransactionImg;
+      default:
+        return '';
+    }
+  };
+
   const _renderUseCases = () => (
     <div className={styles['use-cases']}>
-      <h1 className={styles['use-cases__title']}>
+      <div className={styles['use-cases__title']}>
         Use <span>cases</span>
-      </h1>
+      </div>
       <div>
         {LANDING_USE_CASES.map((item, index: number) => {
           return (
@@ -76,9 +115,9 @@ const Home = () => {
                     {item.description}
                   </div>
                 </div>
-                <img
-                  src={`/images/${item.image}`}
-                  alt={`use-case-${index}`}
+                <Image
+                  src={getUsecaseImageSrc(item.image)}
+                  alt={`Use Case ${item.image}`}
                   className={styles['use-case-img']}
                 />
               </div>
@@ -96,16 +135,16 @@ const Home = () => {
         maintaining data/transactions between on-chain and off-chain. No
         fullnode setup, No code, Multichain.
       </div>
-      <img src="/images/chart.png" alt="chart" />
+      <Image src={multichainImg} alt="Blocklens multichain" />
     </div>
   );
 
   const _renderFeedback = () => (
     <div className={styles['feedback']}>
-      <h1 className={styles['feedback__heading']}>
+      <div className={styles['feedback__heading']}>
         What other <br />
         <span>developers</span> say
-      </h1>
+      </div>
 
       <div className={styles['feedback__content']}>
         <div className={styles['feedback__list']}>
@@ -129,16 +168,16 @@ const Home = () => {
 
   const _renderCTA = () => (
     <div className={styles['get-start']}>
-      <h1 className={styles['get-start__heading']}>
+      <div className={styles['get-start__heading']}>
         Get <span> started </span> now
-      </h1>
+      </div>
       <div className={styles['get-start__description']}>
         Block Lens gives you, the developers, the UX you demand and deserve,
         with no custom code.
       </div>
 
       <div className={styles['get-start__btn']}>
-        <Link href={BLOCKLENS_SINGUP_URL} target="_blank">
+        <Link href={BLOCKLENS_SINGUP_URL} target="_blank" rel="noreferrer">
           <button className={styles['btn-primary']}>Sign Up</button>
         </Link>
       </div>
