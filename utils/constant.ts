@@ -42,7 +42,7 @@ export const LANDING_USE_CASES: {
   {
     name: '1. Address transactions',
     description:
-      'Notify whenever there is a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
+      'Notify whenever a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
     image: 'address-transaction',
   },
   {
@@ -54,7 +54,7 @@ export const LANDING_USE_CASES: {
   {
     name: '3. NFT activities',
     description:
-      'Notify your users when their NFT is minted, transferred to another users. Congrats your users once their in-game NFT is sold, their items is available for sale and much more.',
+      'Notify your users when their NFT is minted, transferred to other users. Congrats your users once their in-game NFT is sold, their items are available for sale and much more.',
     image: 'nft-activity',
   },
   {
@@ -198,5 +198,63 @@ export const PRICING_PLANS: {
     activeApps: '15 apps',
     messagesCount: '12,000 messsages/day',
     linkStarted: '/',
+  },
+];
+
+export const MILESTONES: {
+  content: string;
+  year: string;
+}[] = [
+  { content: 'Company establishment in Hanoi, Vietnam.', year: '2015' },
+  {
+    content: 'Successfully laid the foundation of global expansion.',
+    year: '2016',
+  },
+  {
+    content:
+      "Opened 2 offices in Tokyo and Osaka, Japan; Expanded 70% of in-house resources at SotaTek's Vietnam Development Center.",
+    year: '2017',
+  },
+  { content: 'Catered to SMEs and MNCs from 14+ countries.', year: '2018' },
+  {
+    content: 'Top Asia-Pacific (APAC) Accelerators awarded by Business APAC.',
+    year: '2019',
+  },
+  {
+    content:
+      "Trusted partner of Vietnam's Government in major IT projects & blockchain solutions.",
+    year: '2020',
+  },
+  {
+    content:
+      'Established Sota Holdings; Awarded top 10 ICT - top Software & Blockchain company in Vietnam; Witnessed 300%+ revenue growth.',
+    year: '2021',
+  },
+  {
+    content:
+      'Launched SotaTek Australia office in Sydney; Successful Co-Branding Partnership with Big Brands; Moving towards IPO & greater goals.',
+    year: '2022',
+  },
+];
+
+export const AWARDS: {
+  image: string;
+  date: string;
+  title: string;
+  linkPage: string;
+}[] = [
+  {
+    image: '/images/award1.png',
+    date: 'December 22, 2022',
+    title: 'Sotatek Ranks Top #1 B2B Firms in Vietnam 2022.',
+    linkPage:
+      'https://www.sotatek.com/sotatek-ranks-top-1-b2b-firms-in-vietnam-2022/',
+  },
+  {
+    image: '/images/award2.png',
+    date: 'December 30, 2022',
+    title: 'Sotatek Hit the Top Spot on Top 10 Blockchain Services Pro...',
+    linkPage:
+      'https://www.sotatek.com/sotatek-hits-the-top-spot-on-top-10-blockchain-services-providers-award-2022/',
   },
 ];

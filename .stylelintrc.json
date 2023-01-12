@@ -3,6 +3,7 @@
   "rules": {
     "at-rule-no-unknown": null,
     "import-notation":"string",
-    "color-function-notation": "legacy"
+    "color-function-notation": "legacy",
+    "no-descending-specificity":null
   }
 }
