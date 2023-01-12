@@ -20,9 +20,8 @@
 
       .title-intro {
         font-weight: 400;
-        font-size: 80px;
+        font-size: 60px;
         line-height: 120%;
-        text-align: center;
         color: $title;
         max-width: 940px;
         margin: 0 auto;
@@ -169,10 +168,10 @@
         cursor: pointer;
         width: 135px;
         height: 50px;
-        background: url('/images/logo-company.png') -10px -10px;
+        background: url('/images/logo-company-sprites.png') -10px -10px;
 
         &:hover {
-          background: url('/images/logo-company-hover.png') -10px -10px;
+          background: url('/images/logo-company-hover-sprites.png') -10px -10px;
         }
       }
 
@@ -180,10 +179,10 @@
         cursor: pointer;
         width: 135px;
         height: 50px;
-        background: url('/images/logo-company.png') -10px -122px;
+        background: url('/images/logo-company-sprites.png') -10px -122px;
 
         &:hover {
-          background: url('/images/logo-company-hover.png') -10px -122px;
+          background: url('/images/logo-company-hover-sprites.png') -10px -122px;
         }
       }
 
@@ -191,10 +190,10 @@
         cursor: pointer;
         width: 153px;
         height: 32px;
-        background: url('/images/logo-company.png') -10px -80px;
+        background: url('/images/logo-company-sprites.png') -10px -80px;
 
         &:hover {
-          background: url('/images/logo-company-hover.png') -10px -80px;
+          background: url('/images/logo-company-hover-sprites.png') -10px -80px;
         }
       }
 
@@ -202,10 +201,10 @@
         cursor: pointer;
         width: 162px;
         height: 30px;
-        background: url('/images/logo-company.png') -165px -10px;
+        background: url('/images/logo-company-sprites.png') -165px -10px;
 
         &:hover {
-          background: url('/images/logo-company-hover.png') -165px -10px;
+          background: url('/images/logo-company-hover-sprites.png') -165px -10px;
         }
       }
     }

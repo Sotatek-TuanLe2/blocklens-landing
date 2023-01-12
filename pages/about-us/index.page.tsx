@@ -26,7 +26,12 @@ import styles from 'styles/AboutUs.module.scss';
 import { Controller, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { AWARDS, MILESTONES } from 'utils/constant';
-import { introSotalabs, aboutSotatek, award1, award2 } from 'public/images';
+import {
+  introSotalabsImg,
+  aboutSotatekImg,
+  award1Img,
+  award2Img,
+} from 'public/images';
 
 const AboutUs = () => {
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
@@ -36,11 +41,11 @@ const AboutUs = () => {
   const getLinkImageAwards = (linkImage: string) => {
     switch (linkImage) {
       case '/images/award1.png':
-        return award1;
+        return award1Img;
       case '/images/award2.png':
-        return award2;
+        return award2Img;
       default:
-        return award1;
+        return award1Img;
     }
   };
 
@@ -48,9 +53,9 @@ const AboutUs = () => {
     <div className={styles['about-us-wrap']}>
       <div className={`${styles['introduction']} ${styles['intro-mobile']}`}>
         <div className={`${styles['content-intro']} `}>
-          <div className={styles['title-intro']}>
+          <h1 className={styles['title-intro']}>
             About <span>Sota Labs</span>
-          </div>
+          </h1>
           <div className={styles['des-intro']}>
             <p>
               Sota Labs is a startup studio and the product arm of Sota Tek, the
@@ -66,7 +71,11 @@ const AboutUs = () => {
         </div>
         <div className={styles['image-intro-wrap']}>
           <div className={styles['image-intro']}>
-            <Image placeholder="blur" src={introSotalabs} alt="sotalabs" />
+            <Image
+              placeholder="blur"
+              src={introSotalabsImg}
+              alt="Sotalabs introduction"
+            />
           </div>
           <div className={styles['image-logo']}>
             <BlocklensIcon />
@@ -126,7 +135,11 @@ const AboutUs = () => {
         </div>
         <div className={styles['desc-about-sotatek']}>
           <div className={styles['img-desc']} onClick={onOpen}>
-            <Image placeholder="blur" src={aboutSotatek} alt="about-sotatek" />
+            <Image
+              placeholder="blur"
+              src={aboutSotatekImg}
+              alt="Sotatek introduction"
+            />
             <div className={styles['btn-play-video']}>
               <PlayVideoIcon />
             </div>
@@ -232,7 +245,11 @@ const AboutUs = () => {
           </div>
           <div>
             {' '}
-            <Link href={'https://www.sotatek.com/'} target="_blank">
+            <Link
+              href={'https://www.sotatek.com/'}
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className={styles['btn-read-more']}>Read more</button>
             </Link>
           </div>
@@ -286,7 +303,11 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-        <Link href={'https://www.sotatek.com/'} target="_blank">
+        <Link
+          href={'https://www.sotatek.com/'}
+          target="_blank"
+          rel="noreferrer"
+        >
           <button className={styles['btn-read-more-mobile']}>Read more</button>
         </Link>
       </div>
