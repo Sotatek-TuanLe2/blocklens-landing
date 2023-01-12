@@ -80,11 +80,15 @@ img {
 }
 
 .page-container {
-  background-image: url('/images/bg-homepage.png');
+  background-image: url('/images/bg-homepage.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   font-family: 'Anderson Grotesk Light', sans-serif;
+
+  @include tablet {
+    background-image: url('/images/bg-homepage-mobile.jpg');
+  }
 
   .content-container {
     min-height: 100vh;
