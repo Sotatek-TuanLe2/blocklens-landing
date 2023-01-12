@@ -18,19 +18,19 @@ export const LANDING_FEATURES: {
     name: 'Push notifications',
     description:
       'Notify users of critical events at every step of their journey. Increase user engagement and retention by 100%.',
-    image: 'push-notifications.png',
+    image: 'push-notifications',
   },
   {
     name: 'Advanced events',
     description:
       'Not just address and NFT, Block Lens allows developers to upload their smart contract ABI and specify which one to listen to.',
-    image: 'advanced-events.png',
+    image: 'advanced-events',
   },
   {
     name: 'Simple integration',
     description:
       'Create a new web hook with 1 click and start getting on-chain updates instantly.',
-    image: 'simple-integration.png',
+    image: 'simple-integration',
   },
 ];
 
@@ -42,26 +42,26 @@ export const LANDING_USE_CASES: {
   {
     name: '1. Address transactions',
     description:
-      'Notify whenever there is a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
-    image: 'use-case-1.png',
+      'Notify whenever a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
+    image: 'address-transaction',
   },
   {
     name: '2. Smart contract transactions',
     description:
       'Get to know when a swap, an in-game action, purchases, and other smart-contract transactions were made instantly. Upload your smart contract ABI and specify which method to receive webhook when being called.',
-    image: 'use-case-2.png',
+    image: 'smart-contract-transaction',
   },
   {
     name: '3. NFT activities',
     description:
-      'Notify your users when their NFT is minted, transferred to another users. Congrats your users once their in-game NFT is sold, their items is available for sale and much more.',
-    image: 'use-case-3.png',
+      'Notify your users when their NFT is minted, transferred to other users. Congrats your users once their in-game NFT is sold, their items are available for sale and much more.',
+    image: 'nft-activity',
   },
   {
     name: '4. Failed transactions',
     description:
       'Getting alerts when there is a failed transaction in your smart contract to notify users, aware of hacking attempts. No more refreshing web pages to check for failed transactions.',
-    image: 'use-case-4.png',
+    image: 'failed-transaction',
   },
 ];
 
@@ -198,5 +198,63 @@ export const PRICING_PLANS: {
     activeApps: '15 apps',
     messagesCount: '12,000 messsages/day',
     linkStarted: '/',
+  },
+];
+
+export const MILESTONES: {
+  content: string;
+  year: string;
+}[] = [
+  { content: 'Company establishment in Hanoi, Vietnam.', year: '2015' },
+  {
+    content: 'Successfully laid the foundation of global expansion.',
+    year: '2016',
+  },
+  {
+    content:
+      "Opened 2 offices in Tokyo and Osaka, Japan; Expanded 70% of in-house resources at SotaTek's Vietnam Development Center.",
+    year: '2017',
+  },
+  { content: 'Catered to SMEs and MNCs from 14+ countries.', year: '2018' },
+  {
+    content: 'Top Asia-Pacific (APAC) Accelerators awarded by Business APAC.',
+    year: '2019',
+  },
+  {
+    content:
+      "Trusted partner of Vietnam's Government in major IT projects & blockchain solutions.",
+    year: '2020',
+  },
+  {
+    content:
+      'Established Sota Holdings; Awarded top 10 ICT - top Software & Blockchain company in Vietnam; Witnessed 300%+ revenue growth.',
+    year: '2021',
+  },
+  {
+    content:
+      'Launched SotaTek Australia office in Sydney; Successful Co-Branding Partnership with Big Brands; Moving towards IPO & greater goals.',
+    year: '2022',
+  },
+];
+
+export const AWARDS: {
+  image: string;
+  date: string;
+  title: string;
+  linkPage: string;
+}[] = [
+  {
+    image: '/images/award1.png',
+    date: 'December 22, 2022',
+    title: 'Sotatek Ranks Top #1 B2B Firms in Vietnam 2022.',
+    linkPage:
+      'https://www.sotatek.com/sotatek-ranks-top-1-b2b-firms-in-vietnam-2022/',
+  },
+  {
+    image: '/images/award2.png',
+    date: 'December 30, 2022',
+    title: 'Sotatek Hit the Top Spot on Top 10 Blockchain Services Pro...',
+    linkPage:
+      'https://www.sotatek.com/sotatek-hits-the-top-spot-on-top-10-blockchain-services-providers-award-2022/',
   },
 ];

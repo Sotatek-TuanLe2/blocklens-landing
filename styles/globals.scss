@@ -10,60 +10,70 @@
   font-family: 'DM Sans Bold';
   src: url('/fonts/DMSans-Bold.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DM Sans Bold Italic';
   src: url('/fonts/DMSans-BoldItalic.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DM Sans Italic';
   src: url('/fonts/DMSans-Italic.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DM Sans Medium';
   src: url('/fonts/DMSans-Medium.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DM Sans Medium Italic';
   src: url('/fonts/DMSans-MediumItalic.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'DM Sans Regular';
   src: url('/fonts/DMSans-Regular.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Spline Sans Mono';
   src: url('/fonts/SplineSansMono-Regular.ttf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Anderson Grotesk';
   src: url('/fonts/AndersonGrotesk.otf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Anderson Grotesk Light';
   src: url('/fonts/AndersonGrotesk-Light.otf');
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Anderson Grotesk Bold';
   src: url('/fonts/AndersonGrotesk-Bold.otf');
   font-weight: 700;
+  font-display: swap;
 }
 
 body {
@@ -80,11 +90,18 @@ img {
 }
 
 .page-container {
-  background-image: url('/images/bg-homepage.png');
+  background-image: url('/images/bg-homepage.webp');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   font-family: 'Anderson Grotesk Light', sans-serif;
+  @include tablet {
+    background-image: url('/images/bg-homepage-mobile.webp');
+  }
+
+  @include tablet {
+    background-image: url('/images/bg-homepage-mobile.webp');
+  }
 
   .content-container {
     min-height: 100vh;
@@ -94,7 +111,8 @@ img {
   }
 }
 
-.pricing-container {
+.pricing-container,
+.about-us-container {
   background-image: url('/images/bg-price-page.png');
 }
 
@@ -119,4 +137,209 @@ img {
   width: 12px;
   height: 12px;
   background: url('/images/icon_social_media.png') -10px -55px;
+}
+
+.name-sub-companys {
+  .swiper {
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+
+        svg {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+div.swiper-button-next {
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url('/icons/next-btn.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+
+  &:hover {
+    background-image: url('/icons/next-btn-hover.svg');
+  }
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+div.swiper-button-prev {
+  left: 0;
+  width: 48px;
+  height: 48px;
+  background-image: url('/icons/pre-btn.svg');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+
+  &:hover {
+    background-image: url('/icons/pre-btn-hover.svg');
+  }
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.control-swiper {
+  .swiper {
+    display: flex;
+    flex-direction: row;
+
+    .swiper-wrapper {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      width: 48px;
+      height: 48px;
+      margin-top: 0;
+    }
+  }
+}
+
+.milestones-desc {
+  .vertical-timeline {
+    width: 100% !important;
+    padding: 0;
+
+    &::before {
+      background: #3b528a;
+    }
+  }
+
+  .vertical-timeline-element {
+    .icon-timeline {
+      width: 100%;
+      height: 100%;
+    }
+
+    .vertical-timeline-element-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: none;
+      top: 50%;
+      transform: translateY(-50%);
+      animation: none !important;
+    }
+
+    .vertical-timeline-element-content {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0%) -24.6%,
+        rgba(34, 108, 255, 24%) 100%
+      );
+      border: 1px solid rgba(34, 108, 255, 30%);
+      border-radius: 20px;
+      font-family: 'Anderson Grotesk Light', sans-serif;
+      box-shadow: none;
+      backdrop-filter: blur(8px);
+
+      .vertical-timeline-element-content-arrow {
+        top: 50% !important;
+        transform: rotate(0) !important;
+        border: 0;
+        width: 11.4%;
+        height: 2px;
+        background-color: #3b528a;
+      }
+
+      .element-timeline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+          margin-right: 24px;
+          max-width: 70%;
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 84px;
+          height: 84px;
+          background: linear-gradient(
+            268.85deg,
+            #226cff 22.48%,
+            #1084ff 83.59%
+          );
+          border-radius: 9999px;
+        }
+      }
+
+      &:hover {
+        filter: drop-shadow(0 10px 50px rgba(34, 108, 255, 50%));
+        box-shadow: 0 10px 10px #226cff4d;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.bg-logo-ekoios {
+  width: 150px;
+  height: 30px;
+  background: url('/images/logo-company-sprites.png') -10px -132px;
+}
+
+.bg-logo-icetea {
+  width: 162px;
+  height: 30px;
+  background: url('/images/logo-company-sprites.png') -165px -10px;
+}
+
+.bg-logo-sotatek {
+  width: 135px;
+  height: 50px;
+  background: url('/images/logo-company-sprites.png') -10px -10px;
+}
+
+.bg-logo-sotanext {
+  width: 153px;
+  height: 32px;
+  background: url('/images/logo-company-sprites.png') -10px -80px;
+}
+
+.bg-logo-ekoios-hover {
+  width: 150px;
+  height: 30px;
+  background: url('/images/logo-company-hover-sprites.png') -10px -132px;
+}
+
+.bg-logo-icetea-hover {
+  width: 162px;
+  height: 30px;
+  background: url('/images/logo-company-hover-sprites.png') -165px -10px;
+}
+
+.bg-logo-sotanext-hover {
+  width: 153px;
+  height: 32px;
+  background: url('/images/logo-company-hover-sprites.png') -10px -80px;
+}
+
+.bg-logo-sotatek-hover {
+  width: 135px;
+  height: 50px;
+  background: url('/images/logo-company-hover-sprites.png') -10px -10px;
 }

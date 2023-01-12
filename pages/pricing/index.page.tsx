@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Image from 'next/image';
 import Layout from 'components/Layout';
 import styles from 'styles/PricingPage.module.scss';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
@@ -18,6 +19,7 @@ import {
 import Link from 'next/link';
 import { NextSeoProps, ProductJsonLd } from 'next-seo';
 import { productJsonLd, seoConfigs } from 'next-seo.config';
+import { networkImg } from 'public/images';
 
 const Pricing = () => {
   const _renderPrice = () => (
@@ -76,7 +78,7 @@ const Pricing = () => {
         Support the best <span>networks</span>
       </div>
       <div className={styles['network-support']}>
-        <img src="/images/network-circle.png" alt="network circle" />
+        <Image src={networkImg} alt="Blocklens networks" />
       </div>
     </>
   );

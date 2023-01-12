@@ -1,8 +1,11 @@
 import { ReactElement } from 'react';
+import Image from 'next/image';
 import Layout from 'components/Layout';
 import styles from 'styles/LandingPage.module.scss';
-import Link from 'next/link';
+import 'swiper/swiper.min.css';
+
 import MainImageLanding from 'components/MainImageLanding';
+import Link from 'next/link';
 import {
   BLOCKLENS_LOGIN_URL,
   BLOCKLENS_SINGUP_URL,
@@ -12,6 +15,16 @@ import {
 } from 'utils/constant';
 import { NextSeoProps, ProductJsonLd } from 'next-seo';
 import { productJsonLd, seoConfigs } from 'next-seo.config';
+import {
+  advancedEventImg,
+  multichainImg,
+  pushNotificationImg,
+  simpleIntegrationImg,
+  addressTransactionImg,
+  SCTransactionImg,
+  NFTActivitiesImg,
+  FailedTransactionImg,
+} from 'public/images';
 
 const Home = () => {
   const _renderGetStarted = () => (
@@ -37,6 +50,19 @@ const Home = () => {
     </>
   );
 
+  const getFeatureImageSrc = (image: string) => {
+    switch (image) {
+      case 'push-notifications':
+        return pushNotificationImg;
+      case 'advanced-events':
+        return advancedEventImg;
+      case 'simple-integration':
+        return simpleIntegrationImg;
+      default:
+        return '';
+    }
+  };
+
   const _renderFeatures = () => (
     <div className={styles['categories']}>
       {LANDING_FEATURES.map((item, index) => {
@@ -49,7 +75,7 @@ const Home = () => {
                   {item.description}
                 </div>
               </div>
-              <img src={`/images/${item.image}`} alt={`category-${index}`} />
+              <Image src={getFeatureImageSrc(item.image)} alt={item.image} />
             </div>
             <div className={styles['divider']}></div>
           </div>
@@ -57,6 +83,21 @@ const Home = () => {
       })}
     </div>
   );
+
+  const getUsecaseImageSrc = (image: string) => {
+    switch (image) {
+      case 'address-transaction':
+        return addressTransactionImg;
+      case 'smart-contract-transaction':
+        return SCTransactionImg;
+      case 'nft-activity':
+        return NFTActivitiesImg;
+      case 'failed-transaction':
+        return FailedTransactionImg;
+      default:
+        return '';
+    }
+  };
 
   const _renderUseCases = () => (
     <div className={styles['use-cases']}>
@@ -74,9 +115,9 @@ const Home = () => {
                     {item.description}
                   </div>
                 </div>
-                <img
-                  src={`/images/${item.image}`}
-                  alt={`use-case-${index}`}
+                <Image
+                  src={getUsecaseImageSrc(item.image)}
+                  alt={`Use Case ${item.image}`}
                   className={styles['use-case-img']}
                 />
               </div>
@@ -94,7 +135,7 @@ const Home = () => {
         maintaining data/transactions between on-chain and off-chain. No
         fullnode setup, No code, Multichain.
       </div>
-      <img src="/images/chart.png" alt="chart" />
+      <Image src={multichainImg} alt="Blocklens multichain" />
     </div>
   );
 

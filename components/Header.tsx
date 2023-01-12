@@ -1,8 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FC, useState } from 'react';
 import { CloseMenuIcon, IconMenuMobile } from 'components/Icons';
 import styles from 'styles/components/Header.module.scss';
 import { BLOCKLENS_LOGIN_URL } from 'utils/constant';
+import { logoImg } from 'public/images';
 
 interface IHeader {
   isFixedHeader: boolean;
@@ -18,7 +20,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
     },
     {
       name: 'About us',
-      path: '/',
+      path: '/about-us',
     },
     {
       name: 'Pricing',
@@ -41,7 +43,7 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
       <div className={styles['content']}>
         <div>
           <Link href={'/'}>
-            <img src="/images/logo.png?v=0.0.1" alt="logo" />
+            <Image src={logoImg} alt="Blocklens logo" />
           </Link>
         </div>
         <div className={`${styles['desktop-ui']}`}>
