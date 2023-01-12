@@ -18,19 +18,19 @@ export const LANDING_FEATURES: {
     name: 'Push notifications',
     description:
       'Notify users of critical events at every step of their journey. Increase user engagement and retention by 100%.',
-    image: 'push-notifications.png',
+    image: 'push-notifications',
   },
   {
     name: 'Advanced events',
     description:
       'Not just address and NFT, Block Lens allows developers to upload their smart contract ABI and specify which one to listen to.',
-    image: 'advanced-events.png',
+    image: 'advanced-events',
   },
   {
     name: 'Simple integration',
     description:
       'Create a new web hook with 1 click and start getting on-chain updates instantly.',
-    image: 'simple-integration.png',
+    image: 'simple-integration',
   },
 ];
 
@@ -43,25 +43,25 @@ export const LANDING_USE_CASES: {
     name: '1. Address transactions',
     description:
       'Notify whenever there is a new transaction occurs on your address. Track your wallet balance, no more waiting for every new block.',
-    image: 'use-case-1.png',
+    image: 'address-transaction',
   },
   {
     name: '2. Smart contract transactions',
     description:
       'Get to know when a swap, an in-game action, purchases, and other smart-contract transactions were made instantly. Upload your smart contract ABI and specify which method to receive webhook when being called.',
-    image: 'use-case-2.png',
+    image: 'smart-contract-transaction',
   },
   {
     name: '3. NFT activities',
     description:
       'Notify your users when their NFT is minted, transferred to another users. Congrats your users once their in-game NFT is sold, their items is available for sale and much more.',
-    image: 'use-case-3.png',
+    image: 'nft-activity',
   },
   {
     name: '4. Failed transactions',
     description:
       'Getting alerts when there is a failed transaction in your smart contract to notify users, aware of hacking attempts. No more refreshing web pages to check for failed transactions.',
-    image: 'use-case-4.png',
+    image: 'failed-transaction',
   },
 ];
 
