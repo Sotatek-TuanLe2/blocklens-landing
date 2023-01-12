@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import 'styles/globals.scss';
 import extendTheme from 'themes';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

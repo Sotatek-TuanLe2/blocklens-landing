@@ -2,8 +2,10 @@ import { ReactElement } from 'react';
 import Image from 'next/image';
 import Layout from 'components/Layout';
 import styles from 'styles/LandingPage.module.scss';
-import Link from 'next/link';
+import 'swiper/swiper.min.css';
+
 import MainImageLanding from 'components/MainImageLanding';
+import Link from 'next/link';
 import {
   BLOCKLENS_LOGIN_URL,
   BLOCKLENS_SINGUP_URL,

@@ -9,3 +9,7 @@ export { default as logoImg } from './logo.png';
 export { default as notFoundImg } from './img-not-found.png';
 export { default as multichainImg } from './chart.png';
 export { default as networkImg } from './network-circle.png';
+export { default as introSotalabsImg } from './intro-sotalabs.png';
+export { default as aboutSotatekImg } from './about-sotatek.png';
+export { default as award1Img } from './award1.png';
+export { default as award2Img } from './award2.png';
