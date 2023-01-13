@@ -8,14 +8,12 @@ import {
 } from '@chakra-ui/react';
 import { BlocklensIcon } from 'components/Icons/BlocklensIcon';
 import { PlayVideoIcon } from 'components/Icons/PlayVideo';
-import { SotaHolding } from 'components/Icons/SotaHolding';
 import { TimelineIcon } from 'components/Icons/TimelineIcon';
 import Layout from 'components/Layout';
 import { NextSeoProps, OrganizationJsonLd } from 'next-seo';
 import { organizationJsonLd, seoConfigs } from 'next-seo.config';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { ReactElement, useState } from 'react';
 import {
   VerticalTimeline,
@@ -31,12 +29,12 @@ import {
   aboutSotatekImg,
   award1Img,
   award2Img,
+  SotaHoldingsImg,
 } from 'public/images';
 
 const AboutUs = () => {
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const router = useRouter();
 
   const getLinkImageAwards = (linkImage: string) => {
     switch (linkImage) {
@@ -89,7 +87,7 @@ const AboutUs = () => {
         <div className={styles['title-company']}>
           <div className={styles['divider']}></div>
           <span>Sota labs is a subsidiary of</span>
-          <SotaHolding />
+          <Image src={SotaHoldingsImg} alt="Sota Holdings" />
           <div className={styles['divider']}></div>
         </div>
         <div className={styles['name-sub-companys']}>

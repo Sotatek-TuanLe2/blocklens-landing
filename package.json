@@ -9,7 +9,9 @@
     "lint": "eslint --ext .tsx,.ts --fix . && npx stylelint \"styles/**/*.css\" \"styles/**/*.scss\" && npm run find:unused || exit 0",
     "format": "prettier --write .",
     "pre-commit": "npm run lint && npm run format",
-    "find:unused": "next-unused"
+    "find:unused": "next-unused",
+    "analyze": "source-map-explorer .next/static/**/*.js",
+    "build:analyze": "npm run build && npm run analyze"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.15",
@@ -44,6 +46,7 @@
     "husky": "^4.3.8",
     "next-unused": "0.0.6",
     "prettier": "^2.7.1",
+    "source-map-explorer": "^2.5.3",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0"
