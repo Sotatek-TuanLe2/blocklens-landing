@@ -17,6 +17,7 @@ const nextConfig = {
   optimization: {
     minimize: true,
   },
+  productionBrowserSourceMaps: true,
 };
 
 module.exports = nextConfig;
