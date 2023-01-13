@@ -54,9 +54,9 @@ interface ISeoConfigs {
 }
 
 export const seoConfigs: ISeoConfigs = {
-  title: 'Blocklens',
-  description: 'Blocklens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
-  siteName: 'Blocklens',
+  title: 'Block Lens',
+  description: 'Block Lens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time. Reliable, configurable, real-time.',
+  siteName: 'Block Lens',
   logo: '/favicon.ico',
   url: 'https://blocklens.io',
   contact: {
@@ -118,11 +118,11 @@ export const seoConfigs: ISeoConfigs = {
     },
     {
       name: 'twitter:title',
-      content: 'Blocklens',
+      content: 'Block Lens',
     },
     {
       name: 'twitter:description',
-      content: 'Blocklens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
+      content: 'Block Lens pushes on-chain events to your back-end web hooks. Track your smart-contracts, NFT, addresses in real-time.',
     },
     {
       name: 'twitter:image',
