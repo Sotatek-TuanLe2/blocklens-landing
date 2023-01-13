@@ -1,0 +1,29 @@
+<xml version="1.0" encoding="UTF-8">
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://blocklens.io/</loc>
+      <lastmod>2023-01-12</lastmod>
+      <priority>1.0</priority>
+    </url>
+    <url>
+      <loc>https://blocklens.io/about-us</loc>
+      <lastmod>2023-01-12</lastmod>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>https://blocklens.io/pricing</loc>
+      <lastmod>2023-01-12</lastmod>
+      <priority>0.6</priority>
+    </url>
+    <url>
+      <loc>https://blocklens.io/privacy-policy</loc>
+      <lastmod>2023-01-12</lastmod>
+      <priority>0.2</priority>
+    </url>
+    <url>
+      <loc>https://blocklens.io/terms</loc>
+      <lastmod>2023-01-12</lastmod>
+      <priority>0.6</priority>
+    </url>
+  </urlset>
+</xml>
