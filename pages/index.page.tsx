@@ -1,10 +1,9 @@
 import { ReactElement } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Layout from 'components/Layout';
 import styles from 'styles/LandingPage.module.scss';
 import 'swiper/swiper.min.css';
-
-import MainImageLanding from 'components/MainImageLanding';
 import Link from 'next/link';
 import {
   BLOCKLENS_LOGIN_URL,
@@ -26,6 +25,8 @@ import {
   FailedTransactionImg,
 } from 'public/images';
 
+const LandingMainImage = dynamic(import('pages/landing/MainImageLanding'));
+
 const Home = () => {
   const _renderGetStarted = () => (
     <>
@@ -45,7 +46,7 @@ const Home = () => {
         </Link>
       </div>
       <div className={styles['image-main']}>
-        <MainImageLanding />
+        <LandingMainImage />
       </div>
     </>
   );
