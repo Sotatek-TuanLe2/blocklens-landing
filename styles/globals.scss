@@ -343,3 +343,116 @@ div.swiper-button-prev {
   height: 50px;
   background: url('/images/logo-company-hover-sprites.png') -10px -10px;
 }
+
+.select-app {
+  &__control {
+    @include text-medium-regular;
+
+    background-color: $bg2 !important;
+    border-color: $line !important;
+    height: 48px;
+    border-radius: 6px !important;
+    cursor: pointer;
+
+    &:focus {
+      border-color: $main;
+    }
+
+    .label-option {
+      color: $title;
+    }
+  }
+}
+
+.icon-arrow-down {
+  width: 10px;
+  height: 5px;
+  background: url('/images/icon_app-sprites.png') -46px -96px;
+}
+
+.app-select {
+  position: relative;
+  z-index: 2;
+
+  &__btn-select {
+    @include text-medium-regular;
+
+    border: 1px solid $line;
+    align-items: center;
+    border-radius: 6px;
+    z-index: 2;
+    background-color: 'transparent';
+    justify-content: space-between;
+    cursor: pointer;
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+
+  &.small {
+    .app-select__btn-select {
+      height: 32px;
+      padding: 0 16px;
+    }
+  }
+
+  &.medium {
+    .app-select__btn-select {
+      height: 40px;
+      padding: 0 20px;
+    }
+  }
+
+  &.large {
+    .app-select__btn-select {
+      height: 48px;
+      padding: 0 24px;
+    }
+
+    .app-select__menu {
+      top: 47px;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    background: $border;
+    border-radius: 8px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 10px;
+    z-index: -1;
+    max-height: 200px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__menu-item {
+    @include text-medium-regular;
+
+    cursor: pointer;
+    padding: 8px 18px;
+    align-items: center;
+
+    &:hover {
+      background-color: $bg2;
+    }
+
+    &.selected {
+      background: $gradient;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}
