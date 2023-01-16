@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { StyleProps, Textarea, TextareaProps } from '@chakra-ui/react';
 import { mode } from '@chakra-ui/theme-tools';
 import SimpleReactValidator from 'simple-react-validator';
-import { useForceRender } from 'hooks/useForceRender';
+import useForceUpdate from 'hooks/useForceUpdate';
 
 interface ValidatorProps {
   validator: SimpleReactValidator;
@@ -23,7 +23,7 @@ const AppTextarea: FC<AppTextareaProps> = ({
   hiddenErrorText = false,
   ...props
 }) => {
-  const forceRender = useForceRender();
+  const forceRender = useForceUpdate();
   const onBlur = () => {
     validate?.validator.showMessageFor(validate.name);
     forceRender();

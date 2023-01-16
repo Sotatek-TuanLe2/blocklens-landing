@@ -13,7 +13,10 @@ import { createValidator } from 'utils/validator';
 import rf from 'service/RequestFactory';
 import { toastError, toastSuccess } from 'utils/notify';
 
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from 'react-google-recaptcha-v3';
 import { setRecaptchaToRequest } from 'utils/recaptcha';
 
 const listCountry = COUNTRIES.map((item: { name: string }) => {
@@ -23,7 +26,7 @@ const listCountry = COUNTRIES.map((item: { name: string }) => {
   };
 });
 
-interface IDataFormContact {
+export interface IDataFormContact {
   email: string;
   firstName: string;
   lastName: string;
@@ -49,7 +52,6 @@ const ContactUs = () => {
   const [dataContact, setDataContact] = useState<IDataFormContact>(initialForm);
   const [isDisableSubmit, setIsDisableSubmit] = useState<boolean>(true);
   const [isHiddenError, setIsHiddenError] = useState(false);
-  const [token, setToken] = useState('');
   const { executeRecaptcha } = useGoogleReCaptcha();
   const validator = useRef(
     createValidator({
@@ -72,8 +74,6 @@ const ContactUs = () => {
 
       const result = await executeRecaptcha('homepage');
       setRecaptchaToRequest(result);
-      console.log('result', result);
-      setToken(result);
       await rf.getRequest('UserRequest').contactToAdmin(dataContact);
       toastSuccess({ message: 'Send email successfully' });
     } catch (error: any) {
@@ -244,10 +244,14 @@ ContactUs.getLayout = function (page: ReactElement) {
   };
   return (
     <>
-      <Layout {...seoProps} className="pricing-container">
-        <ProductJsonLd {...productJsonLd} />
-        {page}
-      </Layout>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={'6LcchvMjAAAAAG9Bqt0aP3KBWI9Gg-UtCVg6DGRH'}
+      >
+        <Layout {...seoProps} className="pricing-container">
+          <ProductJsonLd {...productJsonLd} />
+          {page}
+        </Layout>
+      </GoogleReCaptchaProvider>
     </>
   );
 };

@@ -9,7 +9,7 @@ import {
 import { mode } from '@chakra-ui/theme-tools';
 import { StyleProps, forwardRef } from '@chakra-ui/system';
 import SimpleReactValidator from 'simple-react-validator';
-import { useForceRender } from 'hooks/useForceRender';
+import useForceUpdate from 'hooks/useForceUpdate';
 import { ReactNode, useState } from 'react';
 import React from 'react';
 
@@ -46,7 +46,7 @@ const AppInput = forwardRef(
     }: AppInputProps,
     ref,
   ) => {
-    const forceRender = useForceRender();
+    const forceRender = useForceUpdate();
 
     const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
