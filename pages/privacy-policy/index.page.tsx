@@ -275,12 +275,21 @@ const Policy = () => {
                     your personal information (including for its own purposes,
                     e.g., for profiling or linking it to other data),please
                     visit&nbsp;
-                    <a href="https://policies.google.com/technologies/partner-sites">
+                    <a
+                      href="https://policies.google.com/technologies/partner-sites"
+                      rel="nofollow"
+                    >
                       Google Analytics&rsquo; Privacy Policy
                     </a>
                     . To learn more about howto opt-out of Google
                     Analytics&rsquo; use of your information, please click{' '}
-                    <a href="https://tools.google.com/dlpage/gaoptout">here</a>.
+                    <a
+                      href="https://tools.google.com/dlpage/gaoptout"
+                      rel="nofollow"
+                    >
+                      here
+                    </a>
+                    .
                   </p>
                 </li>
               </ul>
