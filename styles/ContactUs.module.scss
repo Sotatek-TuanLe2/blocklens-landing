@@ -24,9 +24,11 @@
     font-size: 18px;
     margin-bottom: 50px;
   }
+
   .form-contact-us {
     max-width: 744px;
     margin: 0 auto;
+
     .btn-submit {
       padding: 12px 24px;
       background: linear-gradient(225deg, #226cff 14.89%, #1084ff 85.85%);
@@ -34,7 +36,6 @@
       font-weight: 700;
       font-size: 18px;
       text-align: center;
-      padding: 12px 24px;
       color: $title;
       font-family: 'Anderson Grotesk Light', sans-serif;
       border: transparent;
@@ -43,6 +44,7 @@
         cursor: pointer;
         background: #226cff;
       }
+
       &:disabled {
         color: #465065;
         background: $disable;
