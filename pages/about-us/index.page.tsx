@@ -1,14 +1,6 @@
-import {
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { BlocklensIcon } from 'components/Icons/BlocklensIcon';
-import { PlayVideoIcon } from 'components/Icons/PlayVideo';
-import { TimelineIcon } from 'components/Icons/TimelineIcon';
+import { useDisclosure } from '@chakra-ui/react';
+import dynamic from 'next/dynamic';
+import { BlocklensIcon, PlayVideoIcon, TimelineIcon } from 'components/Icons';
 import Layout from 'components/Layout';
 import { NextSeoProps, OrganizationJsonLd } from 'next-seo';
 import { organizationJsonLd, seoConfigs } from 'next-seo.config';
@@ -31,6 +23,10 @@ import {
   award2Img,
   SotaHoldingsImg,
 } from 'public/images';
+
+const PlayVideoModal = dynamic(import('./PlayVideoModal'), {
+  ssr: false,
+});
 
 const AboutUs = () => {
   const [controlledSwiper, setControlledSwiper] = useState<any>(null);
@@ -309,23 +305,7 @@ const AboutUs = () => {
           <button className={styles['btn-read-more-mobile']}>Read more</button>
         </Link>
       </div>
-      <Modal isOpen={isOpen} onClose={onClose} size="full">
-        <ModalOverlay />
-        <ModalContent w={'100%'} height={'100%'} bg={'transparent'}>
-          <ModalCloseButton color={'#fff'} />
-          <ModalBody w={'100%'} h={'100%'} padding={0}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/ld-B9DK7Mlc"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+      <PlayVideoModal isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };
