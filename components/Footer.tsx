@@ -6,12 +6,8 @@ import { logoImg } from 'public/images';
 
 const menus = [
   {
-    name: 'Developer',
-    path: '/developer',
-  },
-  {
     name: 'Documentation',
-    path: '/documentation',
+    path: '/',
   },
   {
     name: 'About us',

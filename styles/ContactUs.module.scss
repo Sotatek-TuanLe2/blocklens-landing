@@ -54,4 +54,12 @@
       }
     }
   }
+
+  @include tablet {
+    padding-top: 108px;
+
+    .title-contact-us {
+      font-size: 48px;
+    }
+  }
 }

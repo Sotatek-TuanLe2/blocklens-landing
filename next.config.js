@@ -8,6 +8,16 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  compiler: {
+    removeConsole: {
+      exclude: ['error'],
+    },
+  },
+  compress: true,
+  optimization: {
+    minimize: true,
+  },
+  productionBrowserSourceMaps: true,
 };
 
 module.exports = nextConfig;

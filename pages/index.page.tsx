@@ -32,13 +32,13 @@ const Home = () => {
       <div className={styles['introduction__sub-text']}>
         Notifications for Web3.0 Developers
       </div>
-      <h1 className={styles['introduction__main-text']}>
+      <div className={styles['introduction__main-text']}>
         Listen to <span>on-chain</span> activities
-      </h1>
-      <div className={styles['introduction__description']}>
+      </div>
+      <h1 className={styles['introduction__description']}>
         Block Lens pushes on-chain events to your back-end web hooks. Reliable,
         configurable, real-time. Get started for free now!
-      </div>
+      </h1>
       <div className={styles['introduction__btn']}>
         <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
           <button className={styles['btn-primary']}>Get Started</button>
