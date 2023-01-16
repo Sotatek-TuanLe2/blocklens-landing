@@ -259,7 +259,9 @@ export const AWARDS: {
   },
 ];
 
-export const COUNTRIES = [
+export const COUNTRIES: {
+  name: string;
+}[] = [
   {
     name: 'Afghanistan',
   },
