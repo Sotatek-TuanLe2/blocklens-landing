@@ -30,13 +30,13 @@ const AppField = ({
     <Flex
       alignItems={'flex-start'}
       w={['full', customWidth]}
-      mb={4}
+      mb={'24px'}
       className={'field'}
       position={'relative'}
     >
       <Stack w={'full'} spacing={1}>
         <Flex alignItems={'center'}>
-          <Text whiteSpace={'nowrap'} mr={2} className={'label'}>
+          <Text whiteSpace={'nowrap'} mr={2} color="#B4B7BD">
             {label}{' '}
             {isRequired && (
               <Text as={'span'} color={'red.500'}>

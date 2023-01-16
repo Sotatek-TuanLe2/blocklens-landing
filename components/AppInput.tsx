@@ -47,6 +47,7 @@ const AppInput = forwardRef(
     ref,
   ) => {
     const forceRender = useForceRender();
+
     const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
     const onBlur = () => {
@@ -89,9 +90,9 @@ const AppInput = forwardRef(
             </InputRightElement>
           )}
         </InputGroup>
-        <Box>
-          {!hiddenErrorText &&
-            validate &&
+
+        <Box display={!hiddenErrorText ? 'block' : 'none'}>
+          {validate &&
             !readOnly &&
             validate.validator.message(
               validate.name,
@@ -116,15 +117,15 @@ export const appInputStyles = {
         width: '20px',
         height: '20px',
       },
+      backgroundColor: 'transparent',
     },
   },
   variants: {
     main: (props: StyleProps) => ({
       field: {
-        bg: mode('bg.200', 'bg.200')(props),
-        border: '1px solid',
+        backgroundColor: 'transparent',
+        border: '1px solid #465065',
         color: mode('white', 'white')(props),
-        borderColor: mode('line.100', 'line.300')(props),
         borderRadius: '6px',
         fontSize: '16px',
         p: '20px',

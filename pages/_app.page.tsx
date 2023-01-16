@@ -6,6 +6,7 @@ import 'styles/globals.scss';
 import extendTheme from 'themes';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -19,7 +20,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <ChakraProvider resetCSS theme={extendTheme}>
-      {getLayout(<Component {...pageProps} />)}
+      <GoogleReCaptchaProvider
+        reCaptchaKey={'6LcchvMjAAAAAG9Bqt0aP3KBWI9Gg-UtCVg6DGRH'}
+      >
+        {getLayout(<Component {...pageProps} />)}
+      </GoogleReCaptchaProvider>
     </ChakraProvider>
   );
 }
