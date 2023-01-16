@@ -1,0 +1,5 @@
+{
+    "api": {
+        "baseUrlApi": "https://dev-blocksniper-api.sotatek.works/api/blocklens-users"
+    }
+}
