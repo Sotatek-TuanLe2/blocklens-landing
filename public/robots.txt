@@ -1,4 +1,5 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+Sitemap: https://blocklens-landing.vercel.app/sitemap.xml
+Sitemap: https://blocklens.io/sitemap.xml
