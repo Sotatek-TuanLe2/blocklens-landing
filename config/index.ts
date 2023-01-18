@@ -13,6 +13,7 @@ export interface Config {
   api: {
     baseUrlApi: string;
   };
+  reCaptchaKey: string;
 }
 
 export default config;

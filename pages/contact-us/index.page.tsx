@@ -1,23 +1,27 @@
-import { Button, Flex, Text } from '@chakra-ui/react';
+import { Flex, Text } from '@chakra-ui/react';
 import AppField from 'components/AppField';
 import AppInput from 'components/AppInput';
-import AppSelect from 'components/AppSelect';
 import AppTextarea from 'components/AppTextArea';
 import Layout from 'components/Layout';
 import { NextSeoProps, ProductJsonLd } from 'next-seo';
 import { productJsonLd, seoConfigs } from 'next-seo.config';
-import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import { ReactElement, useEffect, useRef, useState } from 'react';
+import rf from 'service/RequestFactory';
 import styles from 'styles/ContactUs.module.scss';
 import { COUNTRIES } from 'utils/constant';
-import { createValidator } from 'utils/validator';
-import rf from 'service/RequestFactory';
 import { toastError, toastSuccess } from 'utils/notify';
-
+import { createValidator } from 'utils/validator';
+import dynamic from 'next/dynamic';
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
 } from 'react-google-recaptcha-v3';
 import { setRecaptchaToRequest } from 'utils/recaptcha';
+import config from 'config';
+
+const DynamicSelect = dynamic(() => import('react-select'), {
+  ssr: false,
+});
 
 const listCountry = COUNTRIES.map((item: { name: string }) => {
   return {
@@ -90,6 +94,11 @@ const ContactUs = () => {
     setIsDisableSubmit(isDisabled);
   }, [dataContact]);
 
+  const onChangeDataForm = (field: string, value: string) => {
+    setIsHiddenError(false);
+    setDataContact((prevState) => ({ ...prevState, [field]: value }));
+  };
+
   return (
     <div className={styles['contact-us']}>
       <h1 className={styles['title-contact-us']}>
@@ -105,10 +114,7 @@ const ContactUs = () => {
           <AppField label="First Name" isRequired customWidth={'49%'}>
             <AppInput
               hiddenErrorText={isHiddenError}
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({ ...dataContact, firstName: e.target.value });
-              }}
+              onChange={(e) => onChangeDataForm('firstName', e.target.value)}
               value={dataContact.firstName}
               validate={{
                 name: `firstName`,
@@ -117,14 +123,10 @@ const ContactUs = () => {
               }}
             />
           </AppField>
-
           <AppField label="Last Name" isRequired customWidth="49%">
             <AppInput
               hiddenErrorText={isHiddenError}
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({ ...dataContact, lastName: e.target.value });
-              }}
+              onChange={(e) => onChangeDataForm('lastName', e.target.value)}
               value={dataContact.lastName}
               validate={{
                 name: `lastName`,
@@ -138,10 +140,7 @@ const ContactUs = () => {
           <AppField label="Email Address" isRequired>
             <AppInput
               hiddenErrorText={isHiddenError}
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({ ...dataContact, email: e.target.value });
-              }}
+              onChange={(e) => onChangeDataForm('email', e.target.value)}
               value={dataContact.email}
               validate={{
                 name: `email`,
@@ -155,26 +154,22 @@ const ContactUs = () => {
           <AppField label="Your Company" customWidth="49%">
             <AppInput
               hiddenErrorText={isHiddenError}
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({ ...dataContact, company: e.target.value });
-              }}
+              onChange={(e) => onChangeDataForm('company', e.target.value)}
               value={dataContact.company}
             />
           </AppField>
           <AppField label="Your Country" customWidth="49%">
-            <AppSelect
-              hiddenLabelDefault
-              size="large"
-              onChange={(value: string) => {
-                setIsHiddenError(false);
-                setDataContact({
-                  ...dataContact,
-                  country: value,
-                });
-              }}
+            <DynamicSelect
+              className="react-select-container"
+              classNamePrefix="react-select"
+              aria-labelledby="aria-label"
+              name="aria-live-color"
+              onChange={(value: any) =>
+                onChangeDataForm('country', value?.value)
+              }
               options={listCountry}
-              value={dataContact.country || ''}
+              placeholder=""
+              closeMenuOnScroll={true}
             />
           </AppField>
         </Flex>
@@ -186,13 +181,9 @@ const ContactUs = () => {
           >
             <AppInput
               hiddenErrorText={isHiddenError}
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({
-                  ...dataContact,
-                  networkOrChain: e.target.value,
-                });
-              }}
+              onChange={(e) =>
+                onChangeDataForm('networkOrChain', e.target.value)
+              }
               value={dataContact.networkOrChain}
               validate={{
                 name: `networkOrChain`,
@@ -204,10 +195,7 @@ const ContactUs = () => {
 
           <AppField label="Telegram" customWidth="49%">
             <AppInput
-              onChange={(e) => {
-                setIsHiddenError(false);
-                setDataContact({ ...dataContact, telegram: e.target.value });
-              }}
+              onChange={(e) => onChangeDataForm('telegram', e.target.value)}
               value={dataContact.telegram}
             />
           </AppField>
@@ -215,10 +203,7 @@ const ContactUs = () => {
         <AppField label="Tell us about your inquiries">
           <AppTextarea
             rows={6}
-            onChange={(e) => {
-              setIsHiddenError(false);
-              setDataContact({ ...dataContact, feedback: e.target.value });
-            }}
+            onChange={(e) => onChangeDataForm('feedback', e.target.value)}
             value={dataContact.feedback}
           />
         </AppField>
@@ -244,9 +229,7 @@ ContactUs.getLayout = function (page: ReactElement) {
   };
   return (
     <>
-      <GoogleReCaptchaProvider
-        reCaptchaKey={'6LcchvMjAAAAAG9Bqt0aP3KBWI9Gg-UtCVg6DGRH'}
-      >
+      <GoogleReCaptchaProvider reCaptchaKey={config.reCaptchaKey}>
         <Layout {...seoProps} className="pricing-container">
           <ProductJsonLd {...productJsonLd} />
           {page}

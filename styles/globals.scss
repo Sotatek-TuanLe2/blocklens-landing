@@ -456,3 +456,56 @@ div.swiper-button-prev {
 .grecaptcha-badge {
   display: none !important;
 }
+
+.react-select-container {
+  .react-select__indicator-separator {
+    display: none;
+  }
+
+  .react-select__value-container {
+    .react-select__single-value,
+    .react-select__input {
+      color: $title !important;
+    }
+  }
+
+  .react-select__control {
+    height: 3rem;
+    color: $title;
+    box-shadow: none;
+    background-color: transparent;
+    border: 1px solid #465065;
+
+    &:hover {
+      border: 1px solid #465065;
+    }
+  }
+
+  .react-select__menu {
+    margin-top: 0;
+    background: $border;
+    border-radius: 8px;
+
+    .react-select__menu-list {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .react-select__option {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .react-select__option--is-focused,
+      .react-select__option--is-selected {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0%) -24.6%,
+          rgba(34, 108, 255, 24%) 100%
+        );
+        background-color: transparent;
+      }
+    }
+  }
+}
