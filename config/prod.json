@@ -1,5 +1,6 @@
 {
-    "api": {
+  "api": {
     "baseUrlApi": "https://blocksniper-api.sotatek.works/api/blocklens-users"
-  }
+  },
+  "reCaptchaKey": "6LcchvMjAAAAAG9Bqt0aP3KBWI9Gg-UtCVg6DGRH"
 }
