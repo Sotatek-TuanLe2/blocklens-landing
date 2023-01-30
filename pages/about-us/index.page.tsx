@@ -243,6 +243,7 @@ const AboutUs = () => {
               href={'https://www.sotatek.com/'}
               target="_blank"
               rel="noreferrer"
+              title="Click to read more about SotaTek"
             >
               <button className={styles['btn-read-more']}>Read more</button>
             </Link>
@@ -301,6 +302,7 @@ const AboutUs = () => {
           href={'https://www.sotatek.com/'}
           target="_blank"
           rel="noreferrer"
+          title="Click to read more about SotaTek"
         >
           <button className={styles['btn-read-more-mobile']}>Read more</button>
         </Link>
