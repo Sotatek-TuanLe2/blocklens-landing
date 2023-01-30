@@ -254,6 +254,9 @@
         cursor: pointer;
         text-align: center;
         width: 156px;
+        font-weight: 700;
+        font-size: 18px;
+        color: $title;
         background: linear-gradient(225deg, #226cff 14.89%, #1084ff 85.85%);
 
         &:hover {
@@ -267,9 +270,9 @@
         padding: 12px 24px;
         color: $title;
 
-        :first-child {
-          margin-right: 10px;
-        }
+        // :first-child {
+        //   margin-right: 10px;
+        // }
       }
     }
 
