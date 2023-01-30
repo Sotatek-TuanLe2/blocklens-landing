@@ -51,6 +51,7 @@ const Footer = () => {
                 className={styles['menu-item']}
                 href={item.path}
                 key={index}
+                title={item.name}
               >
                 {item.name}
               </Link>
@@ -65,6 +66,7 @@ const Footer = () => {
                 className={styles['menu-item']}
                 href={item.path}
                 key={index}
+                title={item.name}
               >
                 {item.name}
               </Link>

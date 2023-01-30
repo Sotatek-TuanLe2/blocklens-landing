@@ -54,13 +54,19 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
                   className={`${styles['menu']}`}
                   href={item.path}
                   key={index}
+                  title={item.name}
                 >
                   {item.name}
                 </Link>
               );
             })}
             <div>
-              <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
+              <Link
+                href={BLOCKLENS_LOGIN_URL}
+                target="_blank"
+                rel="noreferrer"
+                title="Click to log in Block Lens"
+              >
                 <button className={` ${styles['btn-primary']}`}>Log in</button>
               </Link>
             </div>
@@ -90,7 +96,12 @@ const Header: FC<IHeader> = ({ isFixedHeader }) => {
           })}
 
           <div>
-            <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
+            <Link
+              href={BLOCKLENS_LOGIN_URL}
+              target="_blank"
+              rel="noreferrer"
+              title="Click to log in Block Lens"
+            >
               <button className={styles['btn-primary']}>Log in</button>
             </Link>
           </div>

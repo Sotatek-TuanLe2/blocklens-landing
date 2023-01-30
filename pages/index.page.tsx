@@ -30,18 +30,25 @@ const LandingMainImage = dynamic(import('pages/landing/MainImageLanding'));
 const Home = () => {
   const _renderGetStarted = () => (
     <>
-      <div className={styles['introduction__sub-text']}>
+      <h2 className={styles['introduction__sub-text']}>
         Notifications for Web3.0 Developers
-      </div>
+      </h2>
       <div className={styles['introduction__main-text']}>
         Listen to <span>on-chain</span> activities
       </div>
-      <h1 className={styles['introduction__description']}>
-        Block Lens pushes on-chain events to your back-end web hooks. Reliable,
-        configurable, real-time. Get started for free now!
-      </h1>
+      <div className={styles['introduction__description']}>
+        <h1>Block Lens pushes on-chain events to your back-end web hooks.</h1>
+        <span>
+          Reliable, configurable, real-time. Get started for free now!
+        </span>
+      </div>
       <div className={styles['introduction__btn']}>
-        <Link href={BLOCKLENS_LOGIN_URL} target="_blank" rel="noreferrer">
+        <Link
+          href={BLOCKLENS_LOGIN_URL}
+          target="_blank"
+          rel="noreferrer"
+          title="Click to log in Block Lens"
+        >
           <button className={styles['btn-primary']}>Get Started</button>
         </Link>
       </div>
@@ -178,7 +185,12 @@ const Home = () => {
       </div>
 
       <div className={styles['get-start__btn']}>
-        <Link href={BLOCKLENS_SINGUP_URL} target="_blank" rel="noreferrer">
+        <Link
+          href={BLOCKLENS_SINGUP_URL}
+          target="_blank"
+          rel="noreferrer"
+          title="Click to sign up Block Lens"
+        >
           <button className={styles['btn-primary']}>Sign Up</button>
         </Link>
       </div>

@@ -134,6 +134,7 @@ const Pricing = () => {
                         href={BLOCKLENS_LOGIN_URL}
                         target={'_blank'}
                         rel="noreferrer"
+                        title="Click to log in Block Lens"
                       >
                         Get Started
                       </Link>
@@ -219,6 +220,7 @@ const Pricing = () => {
                 href={BLOCKLENS_LOGIN_URL}
                 target={'_blank'}
                 rel="noreferrer"
+                title="Click to log in Block Lens"
               >
                 Get Started
               </Link>
@@ -233,6 +235,7 @@ const Pricing = () => {
                 href={BLOCKLENS_LOGIN_URL}
                 target={'_blank'}
                 rel="noreferrer"
+                title="Click to log in Block Lens"
               >
                 Get Started
               </Link>
@@ -247,6 +250,7 @@ const Pricing = () => {
                 href={BLOCKLENS_LOGIN_URL}
                 target={'_blank'}
                 rel="noreferrer"
+                title="Click to log in Block Lens"
               >
                 Get Started
               </Link>
@@ -262,6 +266,7 @@ const Pricing = () => {
                 href={BLOCKLENS_LOGIN_URL}
                 target={'_blank'}
                 rel="noreferrer"
+                title="Click to log in Block Lens"
               >
                 Get Started
               </Link>
@@ -294,8 +299,11 @@ const Pricing = () => {
       </div>
       <div className={styles['button-network-wrap']}>
         <div className={styles['button-network']}>
-          <div className={'icon-telegram'}></div>
-          <div>Telegram</div>
+          {/* <div className={'icon-telegram'}></div>
+          <div>Telegram</div> */}
+          <Link href="/contact-us" title="Click to contact us">
+            Contact Us
+          </Link>
         </div>
       </div>
     </>

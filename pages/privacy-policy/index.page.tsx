@@ -278,14 +278,16 @@ const Policy = () => {
                     <a
                       href="https://policies.google.com/technologies/partner-sites"
                       rel="nofollow"
+                      title="Click to visit Google's Privacy and Terms"
                     >
                       Google Analytics&rsquo; Privacy Policy
                     </a>
-                    . To learn more about howto opt-out of Google
+                    . To learn more about how to opt-out of Google
                     Analytics&rsquo; use of your information, please click{' '}
                     <a
                       href="https://tools.google.com/dlpage/gaoptout"
                       rel="nofollow"
+                      title="Click to visit Google analytics opt-out browser add-on"
                     >
                       here
                     </a>
@@ -751,7 +753,7 @@ const Policy = () => {
         this Privacy Policy. If you have any questions about our privacy
         practices or this Privacy Policy, or to exercise your rights as detailed
         in this Privacy Policy, please contact us at{' '}
-        <a href="http://admin@blocklens.io" target={'_blank'} rel="noreferrer">
+        <a href="mailto:admin@blocklens.io" title="Click to contact us">
           admin@blocklens.io
         </a>
         .
